@@ -3,9 +3,9 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: "./index.js",
   output: {
-    filename: "bundle.[contenthash].js",
+    filename: "bundle.js",
     path: path.resolve(__dirname, "./dist"),
     publicPath: "",
   },
@@ -18,19 +18,21 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          { loader: "css-loader", options: { importLoaders: 1 } },
-          {
-            loader: "postcss-loader",
-            options: {
-              postcssOptions: {
-                plugins: [["postcss-preset-env", "cssnano"]],
-              },
-            },
-          },
-          "sass-loader",
-        ],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+        // TODO figure out why this use won't work
+        // use: [
+        //   MiniCssExtractPlugin.loader,
+        //   { loader: "css-loader", options: { importLoaders: 1 } },
+        //   {
+        //     loader: "postcss-loader",
+        //     options: {
+        //       postcssOptions: {
+        //         plugins: [["postcss-preset-env", "cssnano"]],
+        //       },
+        //     },
+        //   },
+        //   "sass-loader",
+        // ],
       },
       {
         test: /\.js$/,
@@ -47,7 +49,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "style.[contenthash].css",
+      filename: "style.css",
     }),
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: [

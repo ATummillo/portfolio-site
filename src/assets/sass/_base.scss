@@ -1,0 +1,64 @@
+:root {
+  // COLOR VARIABLES
+  --color-primary-grey: #262626;
+  --color-primary-white: #f0f2f2;
+
+  --color-secondary-blue: #2f6580;
+  --color-secondary-light: #688ea1;
+  --color-secondary-dark: #425a66;
+
+  --color-accent-blue: #0099e6;
+  --color-accent-purple: #9d50e6;
+
+  // FONT VARIABLES
+  --font-primary: "Titillium Web", sans-serif;
+  --font-regular: 400;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  // RESPONSIVE BREAKPOINTS
+  --bp-largest: 75em; //1200px
+  --bp-large: 62.5em; //1000px
+  --bp-medium: 50em; //800px
+  --bp-small: 37.5em; //600px
+
+  // --button-shadow-header
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  height: 200vh;
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+}
+
+body {
+  display: grid;
+  grid-template-rows: 100vh 100vh;
+  grid-template-columns: 1fr 100rem 1fr;
+
+  .sidebar {
+    background-color: #262626;
+
+    &--1 {
+      grid-row: 2 / -1;
+      grid-column: 1 / 2;
+    }
+
+    &--2 {
+      grid-row: 2 / -1;
+      grid-column: 3 / 4;
+    }
+  }
+}
+
+svg {
+  overflow: hidden;
+}

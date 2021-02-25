@@ -29,6 +29,7 @@ DEBUG = int(os.environ.get("DEBUG", default=1))
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
+    "atummillo-portfolio-site.herokuapp.com",
 ]
 
 # Application definition
@@ -121,9 +122,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = "/static/"
-# STATIC_ROOT = "/app/assets"
+# STATIC_ROOT = ""
 ### Use this one for production
-# STATIC_ROOT = "/vol/web/static"
-# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-STATICFILES_DIRS = [Path.joinpath(BASE_DIR, "assets")]
+STATIC_ROOT = "/vol/web/static"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_DIRS = [Path.joinpath(BASE_DIR, "dist")]
+STATIC_URL = "/static/"

@@ -4,11 +4,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}" />
-    <title>Boilerplate</title>
+    {% comment %} <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}" /> {% endcomment %}
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <title>Tony's Site</title>
   </head>
   <body>
-    <p>Hello World!</p>
+        <header id="Intro" class="intro">
+      <section class="intro__title-box">
+        <p class="intro__line1 t3">Hello, my name is</p>
+        <p class="intro__line2 t1">Anthony Tummillo<span>.</span></p>
+        <p class="intro__line3 t2">I build things on the web.</p>
+      </section>
+      <button id="intro-button" class="intro__btn b1">
+        <section class="intro__btn--flex-container">
+          <span>Checkout my work</span>
+        </section>
+      </button>
+    </header>
+    <canvas class="intro__canvas"></canvas>
+    <div class="sidebar sidebar--1"></div>
+    <div class="sidebar sidebar--2"></div>
+    <section id="About" class="about">About me</section>
+    <script src="{% static 'bundle.js' %}"></script>
   </body>
 </html>
