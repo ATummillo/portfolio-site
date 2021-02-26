@@ -24,7 +24,7 @@ COPY ./package.json /app
 RUN pip install -r requirements.txt
 
 # install node packages
-RUN npm install -g npm@7.5.6
+RUN npm install -g npm@7.6.0
 RUN npm install
 
 # for projects with a frontend

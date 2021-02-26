@@ -3,14 +3,20 @@
   grid-column: 2 / 3;
   position: relative;
 
+  display: grid;
+  grid-template-rows: 3fr 2fr 1fr;
+  grid-template-columns: 1fr;
+
   p {
     cursor: default;
   }
 
   &__title-box {
     position: absolute;
-    top: 20%;
-    left: 15%;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    justify-self: start;
+    align-self: end;
     text-shadow: 0rem 1.5rem 1.5em rgba($color: black, $alpha: 0.5);
   }
 
@@ -38,9 +44,11 @@
 
   &__btn {
     position: absolute;
-    transform: translateX(-50%);
-    top: 70%;
-    left: 50%;
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    justify-self: center;
+    align-self: end;
+
     background-color: var(--color-primary-grey);
     border: 0.3rem solid var(--color-accent-blue);
     border-radius: 1rem;
@@ -53,7 +61,7 @@
     outline: none;
 
     &:active {
-      transform: translateX(-50%) scale(0.95);
+      transform: scale(0.95);
       box-shadow: none;
     }
 

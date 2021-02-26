@@ -1,9 +1,14 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+// const BundleTracker = require("webpack-bundle-tracker");
 
 module.exports = {
-  entry: "./index.js",
+  // For testing prod build on local machince
+  // while working on webpack config.
+  // entry: "./src/assets/js/index.js",
+
+  entry: "./assets/js/index.js",
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "./dist"),
@@ -14,25 +19,32 @@ module.exports = {
     rules: [
       {
         test: /\.(png|jpg)$/,
-        type: "asset/resource",
+        loader: "file-loader",
+        options: {
+          name: "[name].[ext]",
+        },
+      },
+      {
+        test: /\.svg$/,
+        use: [{ loader: "svg-sprite-loader", options: {} }, "svgo-loader"],
       },
       {
         test: /\.scss$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+        // use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
         // TODO figure out why this use won't work
-        // use: [
-        //   MiniCssExtractPlugin.loader,
-        //   { loader: "css-loader", options: { importLoaders: 1 } },
-        //   {
-        //     loader: "postcss-loader",
-        //     options: {
-        //       postcssOptions: {
-        //         plugins: [["postcss-preset-env", "cssnano"]],
-        //       },
-        //     },
-        //   },
-        //   "sass-loader",
-        // ],
+        use: [
+          MiniCssExtractPlugin.loader,
+          { loader: "css-loader", options: { importLoaders: 1 } },
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: [["postcss-preset-env", "cssnano"]],
+              },
+            },
+          },
+          "sass-loader",
+        ],
       },
       {
         test: /\.js$/,
@@ -52,10 +64,11 @@ module.exports = {
       filename: "style.css",
     }),
     new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: [
-        "**/*",
-        path.join(process.cwd(), "build/**/*"),
-      ],
+      cleanOnceBeforeBuildPatterns: ["**/*"],
     }),
+    // new BundleTracker({
+    //   path: __dirname,
+    //   filename: "./dist/webpack-stats.json",
+    // }),
   ],
 };

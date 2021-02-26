@@ -1,11 +1,13 @@
-import "./assets/sass/main.scss";
+import "../sass/main.scss";
+
+import "../img/favicon.png";
 
 // This line grabs all svgs in ./assets/svg/
-// function requireAll(r) {
-//   r.keys().forEach(r);
-// }
+function requireAll(r) {
+  r.keys().forEach(r);
+}
 
-// requireAll(require.context("./assets/svg/", true, /\.svg$/));
+requireAll(require.context("../svg/", true, /\.svg$/));
 
 console.log("Success!");
 
