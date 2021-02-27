@@ -129,7 +129,7 @@ function connect() {
 $("#intro-button").click(function () {
   $("html, body").animate(
     {
-      scrollTop: $("#About").offset().top,
+      scrollTop: $("#Nav").offset().top,
     },
     1000
   );

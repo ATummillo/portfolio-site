@@ -21,13 +21,11 @@
   }
 
   &__line1 {
-    color: var(--color-secondary-blue);
     animation: moveInRight 1.5s ease-out;
     animation-name: moveInRight;
   }
 
   &__line2 {
-    color: var(--color-primary-white);
     animation: moveInRight 1.5s ease-out 1s;
     animation-fill-mode: both;
 
@@ -37,7 +35,6 @@
   }
 
   &__line3 {
-    color: var(--color-secondary-blue);
     animation: moveInRight 1.5s ease-out 2s;
     animation-fill-mode: both;
   }
@@ -52,28 +49,37 @@
     background-color: var(--color-primary-grey);
     border: 0.3rem solid var(--color-accent-blue);
     border-radius: 1rem;
-    padding: 1.5rem 3rem;
+    padding: 1.5rem 1.5rem;
     box-shadow: 0 1rem 1rem rgba(black, 0.5);
     cursor: pointer;
     animation: fadeIn 1.5s ease-in 3s;
     animation-fill-mode: both;
-    transition: 0.2s;
+    transition: all 0.07s ease;
     outline: none;
+
+    &:hover &--icon {
+      transform: rotate(90deg);
+    }
 
     &:active {
       transform: scale(0.95);
       box-shadow: none;
     }
 
-    // &--flex-container {
-    //   background-color: pink;
-    // }
+    &--container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-    // &--icon {
-    //   fill: blue;
-    //   width: 4.5rem;
-    //   height: 4.5rem;
-    // }
+    &--icon {
+      transition: all 0.2s linear;
+      margin-left: 1.5rem;
+      fill: var(--color-accent-blue);
+      width: 4rem;
+      height: 3.5rem;
+    }
   }
 
   &__canvas {

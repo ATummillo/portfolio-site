@@ -9,38 +9,75 @@
       href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Tony's Site</title>
   </head>
   <body>
+    <!-- INTRO PAGE WITH CANVAS -->
+    <canvas class="intro__canvas"></canvas>
     <header id="Intro" class="intro">
       <section class="intro__title-box">
-        <p class="intro__line1 t3">Hello, my name is</p>
-        <p class="intro__line2 t1">Anthony Tummillo<span>.</span></p>
-        <p class="intro__line3 t2">I build things on the web.</p>
+        <p class="intro__line1 t3 t3--blue">Hello, my name is</p>
+        <p class="intro__line2 t1 t1--white">
+          Anthony Tummillo<span class="t1 t1--blue">.</span>
+        </p>
+        <p class="intro__line3 t2 t2--blue">I build things on the web.</p>
       </section>
       <button id="intro-button" class="intro__btn b1">
-        <section class="intro__btn--flex-container">
+        <section class="intro__btn--container">
           <span>Checkout my work</span>
+          <svg class="intro__btn--icon">
+            <use xlink:href="#icon-right-arrow"></use>
+          </svg>
         </section>
       </button>
     </header>
-    <canvas class="intro__canvas"></canvas>
+
+    <!-- SIDEBARS -->
     <div class="sidebar sidebar--1"></div>
     <div class="sidebar sidebar--2"></div>
-    <section id="About" class="about">
-      <p>About me</p>
-      <div>
-        <svg class="intro__btn--icon">
-          <use xlink:href="#icon-right-arrow"></use>
-        </svg>
-        <svg>
-          <use xlink:href="#up-arrow-panel"></use>
-        </svg>
-        <svg>
+
+    <!-- NAVIGATION -->
+    <nav id="Nav" class="nav">
+      <div class="nav__top-container">
+        <svg class="nav__logo">
           <use xlink:href="#personal-logo"></use>
         </svg>
+        <div class="nav__link-container">
+          <div class="nav__link--box"><a class="navlink--text nl">Home</a></div>
+          <div class="nav__link--box">
+            <a class="navlink--text nl">About</a>
+          </div>
+          <div class="nav__link--box">
+            <a class="navlink--text nl">Skills</a>
+          </div>
+          <div class="nav__link--box">
+            <a class="navlink--text nl">Contact</a>
+          </div>
+          <div class="nav__link--box">
+            <a class="navlink--text nl">Portfolio</a>
+          </div>
+          <button class="nav__link--btn b2">Resume</button>
+        </div>
       </div>
+      <div class="nav__side-container">
+        <div class="nav__vert-line"></div>
+        <svg class="nav__social-icon">
+          <use xlink:href="#icon-github"></use>
+        </svg>
+        <svg class="nav__social-icon">
+          <use xlink:href="#icon-linkedin"></use>
+        </svg>
+        <svg class="nav__social-icon">
+          <use xlink:href="#icon-codepen"></use>
+        </svg>
+      </div>
+    </nav>
+
+    <!-- ABOUT SECTION -->
+    <section id="About" class="about">
+      <p>About me</p>
     </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </body>
 </html>
