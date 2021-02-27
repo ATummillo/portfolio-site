@@ -2,7 +2,6 @@
   grid-row: 3 / 4;
   grid-column: 2 / 3;
 
-  height: 600px;
   width: 100.1rem; // TODO Figure out why this doesn't cover the width by 1 px when the screen is wider than 1400px
   background-color: var(--color-primary-grey);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 7rem calc(100% - 3.5rem), 0 100%);
@@ -26,22 +25,26 @@
     grid-row: 2 / 3;
     grid-column: 2 / 2;
 
+    img {
+      position: absolute;
+    }
+
     &:hover {
       div {
-        transform: translate(-0.147em, -38rem);
-        border: 0.1rem solid var(--color-accent-purple);
+        transform: translateX(-0.1rem) translateY(-0.1rem);
+        border-color: var(--color-accent-purple);
       }
     }
   }
 
   &__picture-backdrop {
-    position: absolute;
+    position: relative;
     z-index: -1;
     height: 37.7rem;
-    width: 30.25rem;
+    width: 30.2rem;
     transition: all 0.5s ease;
 
-    transform: translateX(1.9rem) translateY(-35.3rem);
+    transform: translate(2rem, 3.5rem);
     border-radius: 2.5rem;
     border: 0.1rem solid var(--color-secondary-blue);
   }
