@@ -46,6 +46,8 @@ body {
 
   .sidebar {
     background-color: #262626;
+    position: relative;
+    z-index: -1;
 
     &--1 {
       grid-row: 2 / -1;
@@ -61,4 +63,25 @@ body {
 
 svg {
   overflow: hidden;
+}
+
+.section-title {
+  &__container {
+    margin: 3.5rem 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    margin-right: 3.5rem;
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  &__line {
+    width: 100%;
+    height: 0rem;
+    display: inline-block;
+    border-top: 0.1rem solid var(--color-secondary-blue);
+  }
 }

@@ -1,6 +1,8 @@
 import "../sass/main.scss";
 
 import "../img/favicon.png";
+import "../img/profile-picture.png";
+import "../img/profile-picture@2x.png";
 
 // This line grabs all svgs in ./assets/svg/
 function requireAll(r) {

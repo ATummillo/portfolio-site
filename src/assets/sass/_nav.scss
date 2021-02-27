@@ -1,5 +1,6 @@
 .nav {
   position: sticky;
+  z-index: 1;
   top: 0;
   grid-row: 2 / 3;
   grid-column: 1 / -1;
@@ -85,7 +86,7 @@
   }
 
   &__vert-line {
-    height: 14rem;
+    height: 13.5rem;
     width: 2.5rem;
     border-left: 0.3rem solid var(--color-secondary-blue);
     transform: translateX(50%);

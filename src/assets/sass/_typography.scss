@@ -22,6 +22,10 @@ html {
   &--blue {
     color: var(--color-secondary-blue);
   }
+
+  &--white {
+    color: var(--color-primary-white);
+  }
 }
 
 .t3 {
@@ -49,4 +53,14 @@ html {
   font-size: 1.9rem;
   font-weight: 600;
   color: var(--color-primary-white);
+}
+
+.txt {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+
+  &--light {
+    color: var(--color-secondary-light);
+  }
 }
