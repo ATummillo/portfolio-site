@@ -1,0 +1,79 @@
+.contact {
+  grid-row: 6 / 7;
+  grid-column: 2 / 3;
+
+  padding: 0 3.5rem;
+  background-color: var(--color-primary-white);
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 7rem),
+    calc(100% - 7rem) calc(100% - 3.5rem),
+    0 calc(100% - 7rem)
+  );
+
+  display: grid;
+  grid-template-rows: min-content min-content 7rem;
+
+  &__form {
+    grid-row: 2 / 3;
+
+    display: grid;
+    position: relative;
+    grid-template-rows: min-content 3.5rem 3.5rem 16rem 7.5rem;
+    grid-template-columns: 1fr 56rem 1fr;
+    row-gap: 1.5rem;
+
+    &--title {
+      grid-row: 1 / 2;
+      grid-column: 2 / 3;
+    }
+  }
+
+  &__input {
+    outline: none;
+    background-color: var(--color-secondary-light);
+    border: 0.1rem solid var(--color-primary-grey);
+    box-shadow: 0 0.9rem 1.5rem var(--color-primary-grey);
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+  }
+
+  &__name {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    line-height: 2.4rem;
+  }
+
+  &__email {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+    line-height: 2.4rem;
+  }
+
+  &__message {
+    grid-row: 4 / 5;
+    grid-column: 2 / 3;
+    padding-top: 0.5rem;
+  }
+
+  &__submit-btn {
+    grid-row: 5 / 6;
+    grid-column: 2 / 3;
+
+    height: 4rem;
+    justify-self: end;
+    padding: 0.45rem 0.8rem;
+    background-color: var(--color-primary-grey);
+    border: 0.2rem solid var(--color-accent-blue);
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 0.9rem 1.5rem black;
+    transition: all 0.07s ease;
+
+    &:active {
+      transform: scale(0.95);
+      box-shadow: none;
+    }
+  }
+}

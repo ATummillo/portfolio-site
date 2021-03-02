@@ -2,12 +2,8 @@
   grid-row: 3 / 4;
   grid-column: 2 / 3;
 
-  width: 100.1rem; // TODO Figure out why this doesn't cover the width by 1 px when the screen is wider than 1400px
-  background-color: var(--color-primary-grey);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 7rem calc(100% - 3.5rem), 0 100%);
-
   display: grid;
-  grid-template-rows: min-content min-content 7rem;
+  grid-template-rows: min-content min-content;
   grid-template-columns: 2fr 1fr;
   column-gap: 3.5rem;
 
@@ -43,7 +39,6 @@
     height: 37.7rem;
     width: 30.2rem;
     transition: all 0.5s ease;
-
     transform: translate(2rem, 3.5rem);
     border-radius: 2.5rem;
     border: 0.1rem solid var(--color-secondary-blue);

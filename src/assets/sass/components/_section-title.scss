@@ -1,0 +1,20 @@
+.section-title {
+  &__container {
+    margin: 1.75rem 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    margin-right: 3.5rem;
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  &__line {
+    width: 100%;
+    height: 0rem;
+    display: inline-block;
+    border-top: 0.1rem solid var(--color-secondary-blue);
+  }
+}

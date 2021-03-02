@@ -5,6 +5,7 @@ html {
 .t1 {
   font-weight: 600;
   font-size: 5.4rem;
+  cursor: default;
 
   &--white {
     color: var(--color-primary-white);
@@ -18,6 +19,7 @@ html {
 .t2 {
   font-weight: 600;
   font-size: 3.6rem;
+  cursor: default;
 
   &--blue {
     color: var(--color-secondary-blue);
@@ -35,9 +37,14 @@ html {
 .t3 {
   font-weight: 600;
   font-size: 2.4rem;
+  cursor: default;
 
   &--blue {
     color: var(--color-secondary-blue);
+  }
+
+  &--dark {
+    color: var(--color-secondary-dark);
   }
 }
 
@@ -63,8 +70,63 @@ html {
   font-size: 2rem;
   font-weight: 400;
   line-height: 2.4rem;
+  cursor: default;
 
   &--light {
     color: var(--color-secondary-light);
   }
+}
+
+.form {
+  font-family: var(--font-primary);
+  font-weight: var(--font-regular);
+  font-size: 1.6rem;
+  color: black;
+
+  &::placeholder {
+    font-family: var(--font-primary);
+    font-weight: var(--font-regular);
+    font-size: 1.6rem;
+    color: rgba(38, 38, 38, 0.5);
+  }
+}
+
+.f1 {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  cursor: default;
+
+  &--purple {
+    color: var(--color-accent-purple);
+  }
+
+  &--white {
+    color: var(--color-primary-white);
+  }
+}
+
+.ic {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  cursor: default;
+  color: var(--color-secondary-dark);
+}
+
+.card-pt {
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: var(--color-accent-purple);
+}
+
+.card-tt {
+  font-size: 1.9rem;
+  font-weight: 400;
+  color: var(--color-secondary-light);
+}
+
+.card-tli {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--color-accent-purple);
 }
