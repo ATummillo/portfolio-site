@@ -1,25 +1,27 @@
+import { getTopNavHeight } from "./util.js";
+
 // Clickable Nav Elements
 document.querySelector("#Intro-Button").onclick = () => {
   scrollToSection("#About");
 };
 
-document.querySelector("#Home-nl").onclick = () => {
+document.querySelector("#HomeNav").onclick = () => {
   scrollToSection("#Intro");
 };
 
-document.querySelector("#About-nl").onclick = () => {
+document.querySelector("#AboutNav").onclick = () => {
   scrollToSection("#About");
 };
 
-document.querySelector("#Skills-nl").onclick = () => {
+document.querySelector("#SkillsNav").onclick = () => {
   scrollToSection("#Skills");
 };
 
-document.querySelector("#Portfolio-nl").onclick = () => {
+document.querySelector("#PortfolioNav").onclick = () => {
   scrollToSection("#Portfolio");
 };
 
-document.querySelector("#Contact-nl").onclick = () => {
+document.querySelector("#ContactNav").onclick = () => {
   scrollToSection("#Contact");
 };
 
@@ -48,12 +50,7 @@ document.querySelector("#CodePen").onclick = () => {
 
 // Functions
 function scrollToSection(elId) {
-  let navHeight = parseInt(
-    window
-      .getComputedStyle(document.querySelector("#Nav"), null)
-      .getPropertyValue("height"),
-    10
-  );
+  let navHeight = getTopNavHeight();
   let elPosition =
     document.querySelector(elId).getBoundingClientRect().top + window.scrollY;
 

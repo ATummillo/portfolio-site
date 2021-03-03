@@ -15,6 +15,7 @@ addEventListener("resize", () => {
   canvas.height = innerHeight;
 });
 
+//Figure out if there is a way to scope this to the canvas specifically
 addEventListener("mousemove", (event) => {
   mouse.x = event.x;
   mouse.y = event.y;
