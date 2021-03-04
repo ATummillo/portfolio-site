@@ -15,37 +15,442 @@
     <title>Tony's Site</title>
   </head>
   <body>
+    <!-- INTRO PAGE WITH CANVAS -->
+    <canvas class="intro__canvas"></canvas>
     <header id="Intro" class="intro">
       <section class="intro__title-box">
-        <p class="intro__line1 t3">Hello, my name is</p>
-        <p class="intro__line2 t1">Anthony Tummillo<span>.</span></p>
-        <p class="intro__line3 t2">I build things on the web.</p>
+        <p class="intro__line1 t3 t3--blue">Hello, my name is</p>
+        <p class="intro__line2 t1 t1--white">
+          Anthony Tummillo<span class="t1 t1--blue">.</span>
+        </p>
+        <p class="intro__line3 t2 t2--blue">I build things on the web.</p>
       </section>
-      <button id="intro-button" class="intro__btn b1">
-        <section class="intro__btn--flex-container">
+      <button id="Intro-Button" class="intro__btn b1">
+        <section class="intro__btn--container">
           <span>Checkout my work</span>
+          <svg class="intro__btn--icon">
+            <use xlink:href="#icon-right-arrow"></use>
+          </svg>
         </section>
       </button>
     </header>
-    <canvas class="intro__canvas"></canvas>
-    <div class="sidebar sidebar--1"></div>
-    <div class="sidebar sidebar--2"></div>
-    <section id="About" class="about">
-      <p>About me</p>
-      <div>
-        <svg class="intro__btn--icon">
-          <use xlink:href="#icon-right-arrow"></use>
-        </svg>
-        <svg>
-          <use xlink:href="#up-arrow-panel"></use>
-        </svg>
-        <svg>
+
+    <!-- NAVIGATION -->
+    <nav id="Nav" class="nav">
+      <div class="nav__top-container">
+        <svg class="nav__logo">
           <use xlink:href="#personal-logo"></use>
         </svg>
+        <div id="NavContainer" class="nav__link-container">
+          <div id="HomeNav" class="nav__link--box">
+            <a class="navlink--text nl">Home</a>
+          </div>
+          <div id="AboutNav" class="nav__link--box">
+            <a class="navlink--text nl">About</a>
+          </div>
+          <div id="SkillsNav" class="nav__link--box">
+            <a class="navlink--text nl">Skills</a>
+          </div>
+          <div id="PortfolioNav" class="nav__link--box">
+            <a class="navlink--text nl">Portfolio</a>
+          </div>
+          <div id="ContactNav" class="nav__link--box">
+            <a class="navlink--text nl">Contact</a>
+          </div>
+          <button id="Resume" class="nav__link--btn b2">Resume</button>
+          <div id="NavSlider" class="nav__slider"></div>
+        </div>
+      </div>
+      <div class="nav__side-container">
+        <div class="nav__vert-line"></div>
+        <svg id="Github" class="nav__social-icon">
+          <use xlink:href="#icon-github"></use>
+        </svg>
+        <svg id="LinkedIn" class="nav__social-icon">
+          <use xlink:href="#icon-linkedin"></use>
+        </svg>
+        <svg id="CodePen" class="nav__social-icon">
+          <use xlink:href="#icon-codepen"></use>
+        </svg>
+      </div>
+    </nav>
+
+    <!-- ABOUT SECTION -->
+    <section id="About" class="about">
+      <div class="about__title section-title__container">
+        <p class="section-title__title t2 t2--white">About me</p>
+        <div class="section-title__line"></div>
+      </div>
+      <article class="about__text txt txt--light">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+        qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit
+        amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate
+      </article>
+      <div class="about__picture-container">
+        <img
+          class="about__img"
+          src={% static 'profile-picture.png' %}
+          alt="A picture of Tony himself."
+        />
+        <div class="about__picture-backdrop"></div>
       </div>
     </section>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- SKILLS SECTION -->
+    <section id="Skills" class="skills">
+      <div class="section-title__container skills__title">
+        <p class="section-title__title t2 t2--grey">Favorite Technologies</p>
+        <div class="section-title__line"></div>
+      </div>
+      <div class="skills__container">
+        <svg class="skills__banner skills__banner--web">
+          <use xlink:href="#banner-web"></use>
+        </svg>
+        <svg class="skills__block skills__block--web">
+          <use xlink:href="#logoblock-web"></use>
+        </svg>
+        <svg class="skills__stage skills__stage--web">
+          <use xlink:href="#stage"></use>
+        </svg>
+        <svg class="skills__banner skills__banner--db">
+          <use xlink:href="#banner-db"></use>
+        </svg>
+        <svg class="skills__block skills__block--db">
+          <use xlink:href="#logoblock-db"></use>
+        </svg>
+        <svg class="skills__stage skills__stage--db">
+          <use xlink:href="#stage"></use>
+        </svg>
+        <svg class="skills__banner skills__banner--lang">
+          <use xlink:href="#banner-lang"></use>
+        </svg>
+        <svg class="skills__block skills__block--lang">
+          <use xlink:href="#logoblock-lang"></use>
+        </svg>
+        <svg class="skills__stage skills__stage--lang">
+          <use xlink:href="#stage"></use>
+        </svg>
+        <div class="skills__banner--cloud">
+          <svg class="skills__banner">
+            <use xlink:href="#banner-cloud"></use>
+          </svg>
+        </div>
+        <div class="skills__block--cloud">
+          <svg class="skills__block">
+            <use xlink:href="#logoblock-cloud"></use>
+          </svg>
+        </div>
+        <div class="skills__stage--cloud">
+          <svg class="skills__stage">
+            <use xlink:href="#stage"></use>
+          </svg>
+        </div>
+        <div class="skills__banner--misc">
+          <svg class="skills__banner">
+            <use xlink:href="#banner-misc"></use>
+          </svg>
+        </div>
+        <div class="skills__block--misc">
+          <svg class="skills__block">
+            <use xlink:href="#logoblock-misc"></use>
+          </svg>
+        </div>
+        <div class="skills__stage--misc">
+          <svg class="skills__stage">
+            <use xlink:href="#stage"></use>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section id="Portfolio" class="portfolio">
+      <div class="section-title__container">
+        <p class="section-title__title t2 t2--grey">Projects</p>
+        <div class="section-title__line"></div>
+      </div>
+      <div class="portfolio__container">
+        <div class="card portfolio__natours">
+          <div class="card__side card__side--front">
+            <img
+              class="card__img"
+              src={% static 'natours.png' %}
+              alt="A tile for the Natours project."
+            />
+          </div>
+          <div class="card__side card__side--back">
+            <span class="card__project-title card-pt">Natours</span>
+            <span class="card__list-title card-tt">Technologies used:</span>
+            <span class="card-tli">HTML</span>
+            <span class="card-tli">(S)CSS</span>
+            <span class="card-tli">Django</span>
+            <span class="card-tli">Docker</span>
+            <button id="NatoursDemo" class="card__btn card__btn--demo b2">
+              Demo
+            </button>
+            <button id="NatoursRepo" class="card__btn card__btn--repo b2">
+              Repo
+            </button>
+          </div>
+        </div>
+        <div class="card portfolio__trillo">
+          <div class="card__side card__side--front">
+            <img
+              class="card__img"
+              src={% static 'trillo.png' %}
+              alt="A tile for the Trillo project."
+            />
+          </div>
+          <div class="card__side card__side--back">
+            <span class="card__project-title card-pt">Trillo</span>
+            <span class="card__list-title card-tt">Technologies used:</span>
+            <span class="card-tli">HTML</span>
+            <span class="card-tli">(S)CSS</span>
+            <span class="card-tli">Django</span>
+            <span class="card-tli">Docker</span>
+            <button id="TrilloDemo" class="card__btn card__btn--demo b2">
+              Demo
+            </button>
+            <button id="TrilloRepo" class="card__btn card__btn--repo b2">
+              Repo
+            </button>
+          </div>
+        </div>
+        <div class="card portfolio__nexter">
+          <div class="card__side card__side--front">
+            <img
+              class="card__img"
+              src={% static 'nexter.png' %}
+              alt="A tile for the Nexter project."
+            />
+          </div>
+          <div class="card__side card__side--back">
+            <span class="card__project-title card-pt">Nexter</span>
+            <span class="card__list-title card-tt">Technologies used:</span>
+            <span class="card-tli">HTML</span>
+            <span class="card-tli">(S)CSS</span>
+            <span class="card-tli">Django</span>
+            <span class="card-tli">Docker</span>
+            <button id="NexterDemo" class="card__btn card__btn--demo b2">
+              Demo
+            </button>
+            <button id="NexterRepo" class="card__btn card__btn--repo b2">
+              Repo
+            </button>
+          </div>
+        </div>
+        <div class="card portfolio__star-social">
+          <div class="card__side card__side--front">
+            <img
+              class="card__img"
+              src={% static 'star-social.png' %}
+              alt="A tile for the Star-Social project."
+            />
+          </div>
+          <div class="card__side card__side--back">
+            <span class="card__project-title card-pt">Star-Social</span>
+            <span class="card__list-title card-tt">Technologies used:</span>
+            <span class="card-tli">HTML</span>
+            <span class="card-tli">(S)CSS</span>
+            <span class="card-tli">Django</span>
+            <span class="card-tli">Docker</span>
+            <button id="Star-SocialDemo" class="card__btn card__btn--demo b2">
+              Demo
+            </button>
+            <button id="Star-SocialRepo" class="card__btn card__btn--repo b2">
+              Repo
+            </button>
+          </div>
+        </div>
+        <div class="card portfolio__canvas">
+          <div class="card__side card__side--front">
+            <img
+              class="card__img"
+              src={% static 'canvas.png' %}
+              alt="A tile for the Canvas project."
+            />
+          </div>
+          <div class="card__side card__side--back">
+            <span class="card__project-title card-pt">Canvas</span>
+            <span class="card__list-title card-tt">Technologies used:</span>
+            <span class="card-tli">HTML</span>
+            <span class="card-tli">(S)CSS</span>
+            <span class="card-tli">Django</span>
+            <span class="card-tli">Docker</span>
+            <button id="CanvasDemo" class="card__btn card__btn--demo b2">
+              Demo
+            </button>
+            <button id="CanvasRepo" class="card__btn card__btn--repo b2">
+              Repo
+            </button>
+          </div>
+        </div>
+        <div class="card portfolio__recipe-api">
+          <div class="card__side card__side--front">
+            <img
+              class="card__img"
+              src={% static 'recipe-api.png' %}
+              alt="A tile for the Recipe-API project."
+            />
+          </div>
+          <div class="card__side card__side--back">
+            <span class="card__project-title card-pt">Recipe-API</span>
+            <span class="card__list-title card-tt">Technologies used:</span>
+            <span class="card-tli">HTML</span>
+            <span class="card-tli">(S)CSS</span>
+            <span class="card-tli">Django</span>
+            <span class="card-tli">Docker</span>
+            <button id="Recipe-APIDemo" class="card__btn card__btn--demo b2">
+              Demo
+            </button>
+            <button id="Recipe-APIRepo" class="card__btn card__btn--repo b2">
+              Repo
+            </button>
+          </div>
+        </div>
+        <div class="card portfolio__tech-blog">
+          <div class="card__side card__side--front">
+            <img
+              class="card__img"
+              src={% static 'tech-blog.png' %}
+              alt="A tile for the Tech-Blog project."
+            />
+          </div>
+          <div class="card__side card__side--back">
+            <span class="card__project-title card-pt">Tech-Blog</span>
+            <span class="card__list-title card-tt">Technologies used:</span>
+            <span class="card-tli">HTML</span>
+            <span class="card-tli">(S)CSS</span>
+            <span class="card-tli">Django</span>
+            <span class="card-tli">Docker</span>
+            <button id="Tech-BlogDemo" class="card__btn card__btn--demo b2">
+              Demo
+            </button>
+            <button id="Tech-BlogRepo" class="card__btn card__btn--repo b2">
+              Repo
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="Contact" class="contact">
+      <div class="section-title__container">
+        <p class="section-title__title t2 t2--grey">Contact</p>
+        <div class="section-title__line"></div>
+      </div>
+      <form class="contact__form">
+        <p class="contact__form--title t3 t3--dark">
+          Have a question or want to work together?
+        </p>
+        <input
+          type="text"
+          name="name"
+          placeholder="Name"
+          class="contact__input contact__name form"
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          class="contact__input contact__email form"
+        />
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          class="contact__input contact__message form"
+        ></textarea>
+        <button type="submit" class="contact__input contact__submit-btn b2">
+          Submit
+        </button>
+      </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <svg id="Up-Arrow" class="footer__arrow">
+        <use xlink:href="#up-arrow-panel"></use>
+      </svg>
+      <p class="footer__designed-by">
+        <span class="f1 f1--purple">Designed & Built by </span
+        ><span class="f1 f1--white">Anthony Tummillo</span
+        ><span class="f1 f1--purple"> &copy;2021</span>
+      </p>
+      <svg class="footer__logo">
+        <use xlink:href="#personal-logo"></use>
+      </svg>
+      <div class="footer__icon-credits ic">
+        <div>
+          Icons made by
+          <a
+            href="https://www.flaticon.com/authors/dave-gandy"
+            title="Dave Gandy"
+            >Dave Gandy</a
+          >
+          from
+          <a href="https://www.flaticon.com/" title="Flaticon"
+            >www.flaticon.com</a
+          >
+        </div>
+        <div>
+          Icons made by
+          <a href="https://www.freepik.com" title="Freepik">Freepik</a> from
+          <a href="https://www.flaticon.com/" title="Flaticon"
+            >www.flaticon.com</a
+          >
+        </div>
+        <div>
+          Icons made by
+          <a href="https://www.flaticon.com/authors/google" title="Google"
+            >Google</a
+          >
+          from
+          <a href="https://www.flaticon.com/" title="Flaticon"
+            >www.flaticon.com</a
+          >
+        </div>
+        <div>
+          Icons made by
+          <a
+            href="https://www.flaticon.com/authors/kiranshastry"
+            title="Kiranshastry"
+            >Kiranshastry</a
+          >
+          from
+          <a href="https://www.flaticon.com/" title="Flaticon"
+            >www.flaticon.com</a
+          >
+        </div>
+        <div>
+          Icons made by
+          <a
+            href="https://www.flaticon.com/authors/pixel-perfect"
+            title="Pixel perfect"
+            >Pixel perfect</a
+          >
+          from
+          <a href="https://www.flaticon.com/" title="Flaticon"
+            >www.flaticon.com</a
+          >
+        </div>
+      </div>
+    </footer>
+  
     <script src="{% static 'bundle.js' %}"></script>
   </body>
 </html>
