@@ -30,6 +30,8 @@ ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
     "atummillo-portfolio-site.herokuapp.com",
+    "anthonytummillo.com",
+    "www.anthonytummillo.com",
 ]
 
 # Application definition

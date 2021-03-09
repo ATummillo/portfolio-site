@@ -3,6 +3,7 @@ import "./intro-animation.js";
 import "./document-nav.js";
 import "./portfolio-links.js";
 import "./nav-highlight.js";
+import "./send-email.js";
 
 // Import Sass
 import "../sass/main.scss";

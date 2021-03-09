@@ -352,23 +352,30 @@
         <p class="section-title__title t2 t2--grey">Contact</p>
         <div class="section-title__line"></div>
       </div>
-      <form class="contact__form">
+      <form id="ContactForm" class="contact__form">
         <p class="contact__form--title t3 t3--dark">
           Have a question or want to work together?
         </p>
         <input
+          id="NameInput"
           type="text"
+          required
           name="name"
           placeholder="Name"
           class="contact__input contact__name form"
         />
         <input
+          id="EmailInput"
           type="email"
+          required
           name="email"
           placeholder="Email"
           class="contact__input contact__email form"
         />
         <textarea
+          id="MessageInput"
+          type="text"
+          required
           name="message"
           placeholder="Your Message"
           class="contact__input contact__message form"

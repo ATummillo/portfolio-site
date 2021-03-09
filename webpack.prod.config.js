@@ -1,13 +1,11 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-// const BundleTracker = require("webpack-bundle-tracker");
 
 module.exports = {
   // For testing prod build on local machince
   // while working on webpack config.
   // entry: "./src/assets/js/index.js",
-
   entry: "./assets/js/index.js",
   output: {
     filename: "bundle.js",
@@ -30,8 +28,6 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        // use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
-        // TODO figure out why this use won't work
         use: [
           MiniCssExtractPlugin.loader,
           { loader: "css-loader", options: { importLoaders: 1 } },
@@ -66,9 +62,5 @@ module.exports = {
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: ["**/*"],
     }),
-    // new BundleTracker({
-    //   path: __dirname,
-    //   filename: "./dist/webpack-stats.json",
-    // }),
   ],
 };
