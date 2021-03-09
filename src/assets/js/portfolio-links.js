@@ -1,3 +1,11 @@
+// Portfolio Site
+portSiteDemoBtn = document.querySelector("#Portfolio-SiteDemo");
+portSiteDemoBtn.disabled = true;
+
+document.querySelector("#Portfolio-SiteRepo").onclick = () => {
+  window.open("https://github.com/ATummillo/portfolio-site", "_blank");
+};
+
 // Natours
 document.querySelector("#NatoursDemo").onclick = () => {
   window.open("https://atummillo-natours.herokuapp.com/", "_blank");

@@ -69,6 +69,12 @@
       box-shadow: none;
     }
 
+    &--disabled {
+      box-shadow: none;
+      border: 0.2rem solid var(--color-secondary-dark);
+      cursor: default;
+    }
+
     &--demo {
       grid-column: 1 / -1;
     }
