@@ -125,8 +125,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-# STATIC_ROOT = ""
-### Use this one for production
 STATIC_ROOT = "/vol/web/static"
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 STATICFILES_DIRS = [Path.joinpath(BASE_DIR, "dist")]

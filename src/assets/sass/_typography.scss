@@ -46,6 +46,10 @@ html {
   &--dark {
     color: var(--color-secondary-dark);
   }
+
+  &--purple {
+    color: var(--color-accent-purple);
+  }
 }
 
 .b1 {
@@ -55,7 +59,7 @@ html {
 }
 
 .b2 {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-weight: 600;
   color: var(--color-accent-blue);
 
@@ -65,7 +69,7 @@ html {
 }
 
 .nl {
-  font-size: 1.9rem;
+  font-size: 2rem;
   font-weight: 600;
   color: var(--color-primary-white);
 }
@@ -117,20 +121,20 @@ html {
   color: var(--color-secondary-dark);
 }
 
-.card-pt {
-  font-size: 2.3rem;
-  font-weight: 600;
-  color: var(--color-accent-purple);
-}
-
-.card-tt {
-  font-size: 1.9rem;
+.card-desc {
+  font-size: 1.6rem;
   font-weight: 400;
   color: var(--color-secondary-light);
 }
 
+.card-tech {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--color-secondary-light);
+}
+
 .card-tli {
-  font-size: 2rem;
-  font-weight: 400;
+  font-size: 1.6rem;
+  font-weight: 600;
   color: var(--color-accent-purple);
 }

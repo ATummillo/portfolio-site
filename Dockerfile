@@ -19,7 +19,7 @@ WORKDIR /app
 COPY ./src /app
 COPY ./requirements.txt /app
 COPY ./package.json /app
-COPY ./webpack.prod.config.js /app
+COPY ./webpack.config.prod.js /app
 COPY ./build_commands.sh /app
 
 # install python dependencies

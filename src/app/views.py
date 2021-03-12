@@ -1,6 +1,6 @@
 import os
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseServerError, JsonResponse
+from django.http import HttpResponseServerError, JsonResponse
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 

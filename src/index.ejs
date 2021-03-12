@@ -182,101 +182,44 @@
         <p class="section-title__title t2 t2--grey">Projects</p>
         <div class="section-title__line"></div>
       </div>
+      <div class="portfolio__info t3 t3--blue">
+        (All projects are served with Django and deployed on Heroku using
+        Docker)
+      </div>
       <div class="portfolio__container">
-        <div class="card portfolio__natours">
+        <div class="card portfolio__portfolio-site">
           <div class="card__side card__side--front">
             <img
               class="card__img"
-              src="natours.png"
+              src="portfolio-site.png"
               alt="A tile
-            for the Natours project."
+            for my Portfolio site."
             />
           </div>
           <div class="card__side card__side--back">
-            <span class="card__project-title card-pt">Natours</span>
-            <span class="card__list-title card-tt">Technologies used:</span>
-            <span class="card-tli">HTML</span>
+            <span class="card__project-title t3 t3--purple">This Site</span>
+            <span class="card__list-title card-tech">Technologies used:</span>
+            <span class="card-tli">JS (ES6)</span>
             <span class="card-tli">(S)CSS</span>
-            <span class="card-tli">Django</span>
-            <span class="card-tli">Docker</span>
-            <button id="NatoursDemo" class="card__btn card__btn--demo b2">
-              Demo
-            </button>
-            <button id="NatoursRepo" class="card__btn card__btn--repo b2">
-              Repo
-            </button>
-          </div>
-        </div>
-        <div class="card portfolio__trillo">
-          <div class="card__side card__side--front">
-            <img
-              class="card__img"
-              src="trillo.png"
-              alt="A tile for
-            the Trillo project."
-            />
-          </div>
-          <div class="card__side card__side--back">
-            <span class="card__project-title card-pt">Trillo</span>
-            <span class="card__list-title card-tt">Technologies used:</span>
-            <span class="card-tli">HTML</span>
-            <span class="card-tli">(S)CSS</span>
-            <span class="card-tli">Django</span>
-            <span class="card-tli">Docker</span>
-            <button id="TrilloDemo" class="card__btn card__btn--demo b2">
-              Demo
-            </button>
-            <button id="TrilloRepo" class="card__btn card__btn--repo b2">
-              Repo
-            </button>
-          </div>
-        </div>
-        <div class="card portfolio__nexter">
-          <div class="card__side card__side--front">
-            <img
-              class="card__img"
-              src="nexter.png"
-              alt="A tile for
-            the Nexter project."
-            />
-          </div>
-          <div class="card__side card__side--back">
-            <span class="card__project-title card-pt">Nexter</span>
-            <span class="card__list-title card-tt">Technologies used:</span>
-            <span class="card-tli">HTML</span>
-            <span class="card-tli">(S)CSS</span>
-            <span class="card-tli">Django</span>
-            <span class="card-tli">Docker</span>
-            <button id="NexterDemo" class="card__btn card__btn--demo b2">
-              Demo
-            </button>
-            <button id="NexterRepo" class="card__btn card__btn--repo b2">
-              Repo
-            </button>
-          </div>
-        </div>
-        <div class="card portfolio__star-social">
-          <div class="card__side card__side--front">
-            <img
-              class="card__img"
-              src="star-social.png"
-              alt="A
-            tile for the Star-Social project."
-            />
-          </div>
-          <div class="card__side card__side--back">
-            <span class="card__project-title card-pt">Star-Social</span>
-            <span class="card__list-title card-tt">Technologies used:</span>
-            <span class="card-tli">HTML</span>
-            <span class="card-tli">(S)CSS</span>
-            <span class="card-tli">Django</span>
-            <span class="card-tli">Docker</span>
-            <button id="Star-SocialDemo" class="card__btn card__btn--demo b2">
-              Demo
-            </button>
-            <button id="Star-SocialRepo" class="card__btn card__btn--repo b2">
-              Repo
-            </button>
+            <span class="card-tli">HTML5</span>
+            <span class="card-tli">Webpack</span>
+            <span class="card__description card-desc"
+              >My official portfolio site!</span
+            >
+            <div class="card__btn-box">
+              <button
+                id="Portfolio-SiteDemo"
+                class="card__btn card__btn--disabled card__btn--demo b2 b2--disabled"
+              >
+                Demo
+              </button>
+              <button
+                id="Portfolio-SiteRepo"
+                class="card__btn card__btn--repo b2"
+              >
+                Github
+              </button>
+            </div>
           </div>
         </div>
         <div class="card portfolio__canvas">
@@ -289,18 +232,108 @@
             />
           </div>
           <div class="card__side card__side--back">
-            <span class="card__project-title card-pt">Canvas</span>
-            <span class="card__list-title card-tt">Technologies used:</span>
-            <span class="card-tli">HTML</span>
+            <span class="card__project-title t3 t3--purple"
+              >Image Manipulation</span
+            >
+            <span class="card__list-title card-tech">Technologies used:</span>
+            <span class="card-tli">JS (ES6)</span>
+            <span class="card-tli">HTML5</span>
+            <span class="card-tli">Webpack</span>
+            <span class="card__description card-desc">
+              An animation created by manipulating pixels on an HTML5 Canvas!
+            </span>
+            <div class="card__btn-box">
+              <button id="CanvasDemo" class="card__btn card__btn--demo b2">
+                Demo
+              </button>
+              <button id="CanvasRepo" class="card__btn card__btn--repo b2">
+                Github
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card portfolio__star-social">
+          <div class="card__side card__side--front">
+            <img
+              class="card__img"
+              src="star-social.png"
+              alt="A
+            tile for the Star-Social project."
+            />
+          </div>
+          <div class="card__side card__side--back">
+            <span class="card__project-title t3 t3--purple">Star Social</span>
+            <span class="card__list-title card-tech">Technologies used:</span>
+            <span class="card-tli">JS (ES6)</span>
+            <span class="card-tli">HTML5</span>
+            <span class="card-tli">Postgres</span>
+            <span class="card__description card-desc">
+              A blog specifically for lovers of space exploration!
+            </span>
+            <div class="card__btn-box">
+              <button id="Star-SocialDemo" class="card__btn card__btn--demo b2">
+                Demo
+              </button>
+              <button id="Star-SocialRepo" class="card__btn card__btn--repo b2">
+                Github
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card portfolio__nexter">
+          <div class="card__side card__side--front">
+            <img
+              class="card__img"
+              src="nexter.png"
+              alt="A tile for
+            the Nexter project."
+            />
+          </div>
+          <div class="card__side card__side--back">
+            <span class="card__project-title t3 t3--purple">Nexter</span>
+            <span class="card__list-title card-tech">Technologies used:</span>
             <span class="card-tli">(S)CSS</span>
-            <span class="card-tli">Django</span>
-            <span class="card-tli">Docker</span>
-            <button id="CanvasDemo" class="card__btn card__btn--demo b2">
-              Demo
-            </button>
-            <button id="CanvasRepo" class="card__btn card__btn--repo b2">
-              Repo
-            </button>
+            <span class="card-tli">HTML5</span>
+            <span class="card-tli">npm</span>
+            <span class="card__description card-desc">
+              While building this site I learned how to use CSS Grid!
+            </span>
+            <div class="card__btn-box">
+              <button id="NexterDemo" class="card__btn card__btn--demo b2">
+                Demo
+              </button>
+              <button id="NexterRepo" class="card__btn card__btn--repo b2">
+                Github
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card portfolio__trillo">
+          <div class="card__side card__side--front">
+            <img
+              class="card__img"
+              src="trillo.png"
+              alt="A tile for
+            the Trillo project."
+            />
+          </div>
+          <div class="card__side card__side--back">
+            <span class="card__project-title t3 t3--purple">Trillo</span>
+            <span class="card__list-title card-tech">Technologies used:</span>
+            <span class="card-tli">(S)CSS</span>
+            <span class="card-tli">HTML5</span>
+            <span class="card-tli">npm</span>
+            <span class="card__description card-desc">
+              I mastered CSS Flexbox while coding this one!
+            </span>
+            <div class="card__btn-box">
+              <button id="TrilloDemo" class="card__btn card__btn--demo b2">
+                Demo
+              </button>
+              <button id="TrilloRepo" class="card__btn card__btn--repo b2">
+                Github
+              </button>
+            </div>
           </div>
         </div>
         <div class="card portfolio__recipe-api">
@@ -313,18 +346,51 @@
             />
           </div>
           <div class="card__side card__side--back">
-            <span class="card__project-title card-pt">Recipe-API</span>
-            <span class="card__list-title card-tt">Technologies used:</span>
-            <span class="card-tli">HTML</span>
+            <span class="card__project-title t3 t3--purple">Recipe-API</span>
+            <span class="card__list-title card-tech">Technologies used:</span>
+            <span class="card-tli card__top-row">Django REST Framework</span>
+            <span class="card-tli card__bottom-row">Postgres</span>
+            <span class="card__description card-desc">
+              An API that stores and lists recipes. Postgres is used as the
+              database!
+            </span>
+            <div class="card__btn-box">
+              <button id="Recipe-APIDemo" class="card__btn card__btn--demo b2">
+                Demo
+              </button>
+              <button id="Recipe-APIRepo" class="card__btn card__btn--repo b2">
+                Github
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card portfolio__natours">
+          <div class="card__side card__side--front">
+            <img
+              class="card__img"
+              src="natours.png"
+              alt="A tile
+            for the Natours project."
+            />
+          </div>
+          <div class="card__side card__side--back">
+            <span class="card__project-title t3 t3--purple">Natours</span>
+            <span class="card__list-title card-tech">Technologies used:</span>
             <span class="card-tli">(S)CSS</span>
-            <span class="card-tli">Django</span>
-            <span class="card-tli">Docker</span>
-            <button id="Recipe-APIDemo" class="card__btn card__btn--demo b2">
-              Demo
-            </button>
-            <button id="Recipe-APIRepo" class="card__btn card__btn--repo b2">
-              Repo
-            </button>
+            <span class="card-tli">HTML</span>
+            <span class="card-tli">npm</span>
+            <span class="card__description card-desc">
+              A ton of cool animations are in this one. Built with only a float
+              layout!
+            </span>
+            <div class="card__btn-box">
+              <button id="NatoursDemo" class="card__btn card__btn--demo b2">
+                Demo
+              </button>
+              <button id="NatoursRepo" class="card__btn card__btn--repo b2">
+                Github
+              </button>
+            </div>
           </div>
         </div>
         <div class="card portfolio__tech-blog">
@@ -337,48 +403,22 @@
             />
           </div>
           <div class="card__side card__side--back">
-            <span class="card__project-title card-pt">Tech-Blog</span>
-            <span class="card__list-title card-tt">Technologies used:</span>
-            <span class="card-tli">HTML</span>
-            <span class="card-tli">(S)CSS</span>
-            <span class="card-tli">Django</span>
-            <span class="card-tli">Docker</span>
-            <button id="Tech-BlogDemo" class="card__btn card__btn--demo b2">
-              Demo
-            </button>
-            <button id="Tech-BlogRepo" class="card__btn card__btn--repo b2">
-              Repo
-            </button>
-          </div>
-        </div>
-        <div class="card portfolio__portfolio-site">
-          <div class="card__side card__side--front">
-            <img
-              class="card__img"
-              src="portfolio-site.png"
-              alt="A tile
-            for my Portfolio site."
-            />
-          </div>
-          <div class="card__side card__side--back">
-            <span class="card__project-title card-pt">This site!</span>
-            <span class="card__list-title card-tt">Technologies used:</span>
-            <span class="card-tli">HTML</span>
-            <span class="card-tli">(S)CSS</span>
-            <span class="card-tli">Django</span>
-            <span class="card-tli">Docker</span>
-            <button
-              id="Portfolio-SiteDemo"
-              class="card__btn card__btn--disabled card__btn--demo b2 b2--disabled"
-            >
-              Demo
-            </button>
-            <button
-              id="Portfolio-SiteRepo"
-              class="card__btn card__btn--repo b2"
-            >
-              Repo
-            </button>
+            <span class="card__project-title t3 t3--purple">Tech Blog</span>
+            <span class="card__list-title card-tech">Technologies used:</span>
+            <span class="card-tli">JS (ES6)</span>
+            <span class="card-tli">Bootstrap</span>
+            <span class="card-tli">Postgres</span>
+            <span class="card__description card-desc">
+              My first Django application utilizing an external database!
+            </span>
+            <div class="card__btn-box">
+              <button id="Tech-BlogDemo" class="card__btn card__btn--demo b2">
+                Demo
+              </button>
+              <button id="Tech-BlogRepo" class="card__btn card__btn--repo b2">
+                Github
+              </button>
+            </div>
           </div>
         </div>
       </div>
