@@ -2,7 +2,7 @@ import { getTopNavHeight } from "./util.js";
 
 // navAdj makes sure the line is in the appropriate spot when you click
 // an item in the top nav menu
-let navAdj = getTopNavHeight() + 15;
+let navAdj = getTopNavHeight() + 25;
 let sections = {
   HOME: {
     TOP:
@@ -40,6 +40,7 @@ let sections = {
   },
 };
 let currentSection = sections.HOME;
+console.log(sections.PORTFOLIO.TOP);
 
 // Initialize the line
 const line = document.querySelector("#NavSlider");
@@ -78,6 +79,8 @@ function moveLineTo(target) {
 function getCurrentSection() {
   if (0 <= window.scrollY && window.scrollY < sections.ABOUT.TOP) {
     return sections.HOME;
+  } else if (window.scrollY + innerHeight >= document.body.scrollHeight) {
+    return sections.CONTACT;
   } else if (
     sections.ABOUT.TOP <= window.scrollY &&
     window.scrollY < sections.SKILLS.TOP

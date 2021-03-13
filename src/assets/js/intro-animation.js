@@ -3,7 +3,7 @@ const ctxt = canvas.getContext("2d");
 canvas.width = innerWidth;
 canvas.height = innerHeight;
 let particleArray;
-const numberOfParticles = 75;
+const numberOfParticles = 50;
 
 const mouse = {
   x: null,
@@ -47,8 +47,8 @@ class Particle {
     this.size -= 0.1;
 
     if (this.size < 0) {
-      this.x = mouse.x + (Math.random() * 20 - 10);
-      this.y = mouse.y + (Math.random() * 20 - 10);
+      this.x = mouse.x + Math.random() * 40 - 20;
+      this.y = mouse.y + Math.random() * 40 - 20;
       this.size = Math.random() * 5 + 5;
       this.weight = Math.random() * 2 - 0.5;
     }
@@ -65,12 +65,12 @@ class Particle {
 function init() {
   particleArray = [];
   for (let i = 0; i < numberOfParticles; i++) {
-    let x = Math.random() * canvas.width;
-    let y = Math.random() * canvas.height;
+    // let x = Math.random() * canvas.width;
+    // let y = Math.random() * canvas.height;
     let size = Math.random() * 10 + 5;
     let color = "grey";
     let weight = 1;
-    particleArray.push(new Particle(x, y, size, color, weight));
+    particleArray.push(new Particle(0, 0, size, color, weight));
   }
 }
 
@@ -83,10 +83,8 @@ function animate() {
   requestAnimationFrame(animate);
 }
 
-setTimeout(() => {
-  init();
-  animate();
-}, 4500);
+init();
+animate();
 
 function connect() {
   let opacityValue = 1;
@@ -102,7 +100,7 @@ function connect() {
         ctxt.strokeStyle = `rgba(157, 80, 230, ${opacityValue})`;
 
         ctxt.beginPath();
-        ctxt.lineWidth = 0.1;
+        ctxt.lineWidth = 0.08;
         ctxt.moveTo(pA.x, pA.y);
         ctxt.lineTo(pB.x, pB.y);
         ctxt.stroke();
