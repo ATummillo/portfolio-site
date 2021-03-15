@@ -40,7 +40,6 @@ let sections = {
   },
 };
 let currentSection = sections.HOME;
-console.log(sections.PORTFOLIO.TOP);
 
 // Initialize the line
 const line = document.querySelector("#NavSlider");

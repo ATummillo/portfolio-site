@@ -1,6 +1,20 @@
 // Portfolio Site
+var projectClicked = false;
+
 portSiteDemoBtn = document.querySelector("#Portfolio-SiteDemo");
 portSiteDemoBtn.disabled = true;
+
+function openDemo(projectUrl) {
+  if (projectClicked) {
+    window.open(projectUrl, "_blank");
+  } else {
+    alert(
+      "Before heading over to the project, I just wanted to warn you that all of these demos are running on Heroku's free-tier dynos. This means that up to a 15 second load time is totally normal when the server hasn't been contacted in a while!"
+    );
+    projectClicked = true;
+    window.open(projectUrl, "_blank");
+  }
+}
 
 document.querySelector("#Portfolio-SiteRepo").onclick = () => {
   window.open("https://github.com/ATummillo/portfolio-site", "_blank");
@@ -8,7 +22,7 @@ document.querySelector("#Portfolio-SiteRepo").onclick = () => {
 
 // Natours
 document.querySelector("#NatoursDemo").onclick = () => {
-  window.open("https://atummillo-natours.herokuapp.com/", "_blank");
+  openDemo("https://atummillo-natours.herokuapp.com/");
 };
 
 document.querySelector("#NatoursRepo").onclick = () => {
@@ -17,7 +31,7 @@ document.querySelector("#NatoursRepo").onclick = () => {
 
 // Trillo
 document.querySelector("#TrilloDemo").onclick = () => {
-  window.open("https://atummillo-trillo.herokuapp.com/", "_blank");
+  openDemo("https://atummillo-trillo.herokuapp.com/");
 };
 
 document.querySelector("#TrilloRepo").onclick = () => {
@@ -26,7 +40,7 @@ document.querySelector("#TrilloRepo").onclick = () => {
 
 // Nexter
 document.querySelector("#NexterDemo").onclick = () => {
-  window.open("https://atummillo-nexter.herokuapp.com/", "_blank");
+  openDemo("https://atummillo-nexter.herokuapp.com/");
 };
 
 document.querySelector("#NexterRepo").onclick = () => {
@@ -35,7 +49,7 @@ document.querySelector("#NexterRepo").onclick = () => {
 
 // Star Social
 document.querySelector("#Star-SocialDemo").onclick = () => {
-  window.open("https://atummillo-star-social.herokuapp.com/", "_blank");
+  openDemo("https://atummillo-star-social.herokuapp.com/");
 };
 
 document.querySelector("#Star-SocialRepo").onclick = () => {
@@ -43,11 +57,20 @@ document.querySelector("#Star-SocialRepo").onclick = () => {
 };
 
 // Canvas Image Manipulation
-// Currently the project is not hosted anywhere and does not have a github repo
+document.querySelector("#CanvasDemo").onclick = () => {
+  openDemo("https://canvas-image-manipulation.herokuapp.com/");
+};
+
+document.querySelector("#CanvasRepo").onclick = () => {
+  window.open(
+    "https://github.com/ATummillo/canvas-image-manipulation",
+    "_blank"
+  );
+};
 
 // Recipe API
 document.querySelector("#Recipe-APIDemo").onclick = () => {
-  window.open("https://atummillo-recipe-api.herokuapp.com/", "_blank");
+  openDemo("https://atummillo-recipe-api.herokuapp.com/api/recipe/");
 };
 
 document.querySelector("#Recipe-APIRepo").onclick = () => {
@@ -56,7 +79,7 @@ document.querySelector("#Recipe-APIRepo").onclick = () => {
 
 // Tech Blog
 document.querySelector("#Tech-BlogDemo").onclick = () => {
-  window.open("https://tech-blog-demo.herokuapp.com/", "_blank");
+  openDemo("https://tech-blog-demo.herokuapp.com/");
 };
 
 document.querySelector("#Tech-BlogRepo").onclick = () => {
