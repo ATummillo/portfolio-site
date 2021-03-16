@@ -8,6 +8,7 @@
   column-gap: 3.5rem;
 
   &__img {
+    position: absolute;
     height: 37.5rem;
     width: 30rem;
   }
@@ -26,10 +27,6 @@
     grid-row: 2 / 3;
     grid-column: 2 / 2;
 
-    img {
-      position: absolute;
-    }
-
     &:hover {
       div {
         transform: translateX(-0.1rem) translateY(-0.1rem);
@@ -44,8 +41,8 @@
     height: 37.7rem;
     width: 30.2rem;
     transition: all 0.5s ease;
-    transform: translate(2rem, 3.5rem);
+    transform: translate(3.5rem, 3.5rem);
     border-radius: 2.5rem;
-    border: 0.1rem solid var(--color-secondary-blue);
+    border: 0.2rem solid var(--color-secondary-blue);
   }
 }

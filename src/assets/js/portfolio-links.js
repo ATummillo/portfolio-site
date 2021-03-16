@@ -1,18 +1,22 @@
+import Modal from "./Modal";
+
 // Portfolio Site
 var projectClicked = false;
 
-portSiteDemoBtn = document.querySelector("#Portfolio-SiteDemo");
+let portSiteDemoBtn = document.querySelector("#Portfolio-SiteDemo");
 portSiteDemoBtn.disabled = true;
 
 function openDemo(projectUrl) {
   if (projectClicked) {
     window.open(projectUrl, "_blank");
   } else {
-    alert(
-      "Before heading over to the project, I just wanted to warn you that all of these demos are running on Heroku's free-tier dynos. This means that up to a 15 second load time is totally normal when the server hasn't been contacted in a while!"
+    let modal = new Modal(
+      "Demo Notice",
+      `Before heading over to ${projectUrl}, I just wanted to warn you that all of these demos are running on Heroku's free-tier dynos. This means that up to a 15 second load time is totally normal if the site has not been visited in a while!`,
+      "Continue"
     );
+    modal.render(projectUrl);
     projectClicked = true;
-    window.open(projectUrl, "_blank");
   }
 }
 

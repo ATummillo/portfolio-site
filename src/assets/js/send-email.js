@@ -1,4 +1,5 @@
 import axios from "axios";
+import Modal from "./Modal";
 
 var form = document.querySelector("#ContactForm");
 
@@ -14,9 +15,12 @@ form.onsubmit = (event) => {
   axios
     .post("send_email/", data)
     .then((res) => {
-      alert(
-        "Your email was successfully sent. I look forward to speaking with you!"
+      let modal = new Modal(
+        "Email Delivered",
+        "Your email was successfully sent to atummillo.dev@gmail.com. I look forward to speaking with you!<br/><br/> - Tony",
+        "Done"
       );
+      modal.render("");
       form.reset();
     })
     .catch((errors) => {

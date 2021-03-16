@@ -1,7 +1,7 @@
 {
-  "name": "django-template",
+  "name": "portfolio-site",
   "version": "1.0.0",
-  "description": "A template to be used for Django projects",
+  "description": "My own personal website",
   "main": "templates/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ATummillo/django-template.git"
+    "url": "git+https://github.com/ATummillo/portfolio-site.git"
   },
   "author": "Anthony Tummillo",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ATummillo/django-template/issues"
+    "url": "https://github.com/ATummillo/portfolio-site/issues"
   },
-  "homepage": "https://github.com/ATummillo/django-template#readme",
+  "homepage": "https://github.com/ATummillo/portfolio-site#readme",
   "devDependencies": {
     "@babel/core": "^7.12.17",
     "@babel/plugin-proposal-class-properties": "^7.12.13",
