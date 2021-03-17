@@ -2,7 +2,7 @@
 
 ![Image](https://drive.google.com/uc?export=view&id=1w4NZCoaAihV6emR45mIQp813VJWyigXn)
 
-> My personal website where you can find my portfolio and contact info!
+> My personal website and portfolio!
 
 ---
 ### Table of Contents
@@ -12,9 +12,7 @@
   - [Description](#description)
       - [Technologies](#technologies)
   - [How To Use](#how-to-use)
-      - [Installation](#installation)
-      - [API Reference](#api-reference)
-  - [References](#references)
+    - [Installation](#installation)
   - [License](#license)
   - [Author Info](#author-info)
 
@@ -22,12 +20,16 @@
 
 ## Description
 
-This is my first project using blah blah blah.
+This is my first 100% custom built, "farm to table" project. It is serving as both my own personally branded website and online portfolio. I am the sole contributor from design through to the latest live version. Some of my favorite aspects of this site are the mouse tracking animation at the beginning as well as the various interactive elements throughout the page. 
 
 #### Technologies
 
-- Technology 1
-- Technology 2
+- Javascript (ES6)
+- HTML5
+- Sass/CSS3
+- Webpack
+- Django
+- Docker
 
 [Back To The Top](#my-portfolio-site)
 
@@ -35,21 +37,20 @@ This is my first project using blah blah blah.
 
 ## How To Use
 
-#### Installation
+It can be viewed live at [anthonytummillo.com](https://anthonytummillo.com)
 
+### Installation
 
-
-#### API Reference
-
-```html
-    <p>dummy code</p>
+```unix
+    git clone https://github.com/ATummillo/portfolio-site.git
+    cd portfolio-site
+    docker-compose up
 ```
+The site should now be running at [localhost:8000](http://localhost:8000)
+
 [Back To The Top](#my-portfolio-site)
 
 ---
-
-## References
-[Back To The Top](#my-portfolio-site)
 
 ---
 
@@ -57,7 +58,7 @@ This is my first project using blah blah blah.
 
 MIT License
 
-Copyright (c) [2017] [James Q Quick]
+Copyright (c) [2021] [Anthony Tummillo]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -83,7 +84,9 @@ SOFTWARE.
 
 ## Author Info
 
-- Twitter - [@jamesqquick](https://twitter.com/jamesqquick)
-- Website - [James Q Quick](https://jamesqquick.com)
+- Personal Website - [anthonytummillo.com](https://anthonytummillo.com)
+- Codepen - [codepen.io/ATummillo](https://codepen.io/ATummillo/)
+- LinkedIn - [linkedin.com/in/anthonytummillo](https://www.linkedin.com/in/anthonytummillo/)
+- Email - atummillo.dev@gmail.com
 
 [Back To The Top](#my-portfolio-site)
