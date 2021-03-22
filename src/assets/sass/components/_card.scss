@@ -18,9 +18,20 @@
     border-radius: 1.5rem;
     overflow: hidden;
 
+    &--front {
+      @media only screen and (max-width: $bp-tablet-landscape) {
+        display: none;
+      }
+    }
+
     &--back {
       transform: rotateY(180deg);
       background-color: var(--color-primary-grey);
+
+      @media only screen and (max-width: $bp-tablet-landscape) {
+        transform: rotateY(0deg);
+      }
+
       padding: 2rem 2rem;
       transition: translateY 0s unset 0.8s;
 
@@ -96,6 +107,126 @@
       box-shadow: none;
       border: 0.2rem solid var(--color-secondary-dark);
       cursor: default;
+    }
+  }
+
+  &__portfolio-site {
+    &--back {
+      @media only screen and (max-width: $bp-tablet-landscape) {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba(38, 38, 38, 0.95),
+            rgba(38, 38, 38, 0.95)
+          ),
+          url(../img/portfolio-site.png);
+        background-size: cover;
+        background-position: top;
+      }
+    }
+  }
+
+  &__canvas {
+    &--back {
+      @media only screen and (max-width: $bp-tablet-landscape) {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba(38, 38, 38, 0.95),
+            rgba(38, 38, 38, 0.95)
+          ),
+          url(../img/canvas.png);
+        background-size: cover;
+        background-position: top;
+      }
+    }
+  }
+
+  &__star-social {
+    &--back {
+      @media only screen and (max-width: $bp-tablet-landscape) {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba(38, 38, 38, 0.95),
+            rgba(38, 38, 38, 0.95)
+          ),
+          url(../img/star-social.png);
+        background-size: cover;
+        background-position: top;
+      }
+    }
+  }
+
+  &__nexter {
+    &--back {
+      @media only screen and (max-width: $bp-tablet-landscape) {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba(38, 38, 38, 0.95),
+            rgba(38, 38, 38, 0.95)
+          ),
+          url(../img/nexter.png);
+        background-size: cover;
+        background-position: top;
+      }
+    }
+  }
+
+  &__trillo {
+    &--back {
+      @media only screen and (max-width: $bp-tablet-landscape) {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba(38, 38, 38, 0.95),
+            rgba(38, 38, 38, 0.95)
+          ),
+          url(../img/trillo.png);
+        background-size: cover;
+        background-position: top;
+      }
+    }
+  }
+
+  &__recipe-api {
+    &--back {
+      @media only screen and (max-width: $bp-tablet-landscape) {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba(38, 38, 38, 0.95),
+            rgba(38, 38, 38, 0.95)
+          ),
+          url(../img/recipe-api.png);
+        background-size: cover;
+        background-position: top;
+      }
+    }
+  }
+
+  &__natours {
+    &--back {
+      @media only screen and (max-width: $bp-tablet-landscape) {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba(38, 38, 38, 0.95),
+            rgba(38, 38, 38, 0.95)
+          ),
+          url(../img/natours.png);
+        background-size: cover;
+        background-position: top;
+      }
+    }
+  }
+
+  &__tech-blog {
+    &--back {
+      @media only screen and (max-width: $bp-tablet-landscape) {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba(38, 38, 38, 0.95),
+            rgba(38, 38, 38, 0.95)
+          ),
+          url(../img/tech-blog.png);
+        background-size: cover;
+        background-position: top;
+      }
     }
   }
 }

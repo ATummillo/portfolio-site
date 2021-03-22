@@ -1,3 +1,9 @@
+// RESPONSIVE BREAKPOINTS
+$bp-laptop: 87.5em; //1400px
+$bp-tablet-landscape: 62.5em; //1000px
+$bp-tablet-portrait: 50em; //800px
+$bp-phone: 37.5em; //600pxcle
+
 :root {
   // COLOR VARIABLES
   --color-primary-grey: #262626;
@@ -15,12 +21,6 @@
   --font-regular: 400;
   --font-semibold: 600;
   --font-bold: 700;
-
-  // RESPONSIVE BREAKPOINTS
-  --bp-largest: 87.5em; //1400px
-  --bp-large: 62.5em; //1000px
-  --bp-medium: 50em; //800px
-  --bp-small: 37.5em; //600px
 }
 
 *,
@@ -34,8 +34,15 @@
 html {
   box-sizing: border-box;
   background-color: var(--color-primary-grey);
-  // font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
-  font-size: 50%; // This makes the site work on macbook 13" screen -> 1rem = 8px
+  font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+
+  @media only screen and (max-width: $bp-laptop) {
+    font-size: 50%;
+  }
+
+  @media only screen and (max-width: $bp-tablet-landscape) {
+    font-size: 37.5%;
+  }
 }
 
 body {

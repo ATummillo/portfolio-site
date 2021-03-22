@@ -6,12 +6,19 @@
   grid-column: 1 / -1;
 
   background-color: var(--color-primary-grey);
-  // border-bottom: 0.3rem solid var(--color-secondary-blue);
-  border-bottom: 0.5rem solid var(--color-secondary-blue);
-
+  border-bottom: 0.3rem solid var(--color-secondary-blue);
   display: grid;
   grid-template-rows: 7rem min-content;
   grid-template-columns: 1fr 100rem 1fr;
+
+  @media only screen and (max-width: $bp-laptop) {
+    border-bottom: 0.5rem solid var(--color-secondary-blue);
+  }
+
+  @media only screen and (max-width: $bp-tablet-landscape) {
+    // display: none;
+    // switch to hamburger menu instead of text links
+  }
 
   &__slider {
     position: absolute;
@@ -97,10 +104,12 @@
   &__vert-line {
     height: 13.5rem;
     width: 2.5rem;
-    // border-left: 0.3rem solid var(--color-secondary-blue);
-    border-left: 0.5rem solid var(--color-secondary-blue);
-
+    border-left: 0.3rem solid var(--color-secondary-blue);
     transform: translateX(50%);
+
+    @media only screen and (max-width: $bp-laptop) {
+      border-left: 0.5rem solid var(--color-secondary-blue);
+    }
   }
 
   &__social-icon {
