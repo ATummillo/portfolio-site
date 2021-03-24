@@ -1,10 +1,51 @@
 import { getTopNavHeight } from "./util.js";
+import BurgerNav from "./BurgerNav.js";
 
-// Clickable Nav Elements
+/*
+    Functions
+*/
+let scrollToSection = (elId) => {
+  let navHeight = getTopNavHeight();
+  let elPosition =
+    document.querySelector(elId).getBoundingClientRect().top + window.scrollY;
+
+  if (elId == "#Skills") {
+    elPosition += navHeight;
+  }
+
+  let offsetPosition = elPosition - navHeight;
+
+  window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+  burgerToggle.checked = false;
+};
+
+/*
+    Device-independent nav elements
+*/
 document.querySelector("#Intro-Button").onclick = () => {
   scrollToSection("#About");
 };
 
+document.querySelector("#Up-Arrow").onclick = () => {
+  scrollToSection("#Intro");
+};
+
+document.querySelector("#Github").onclick = () => {
+  window.open("https://github.com/ATummillo", "_blank");
+};
+
+document.querySelector("#LinkedIn").onclick = () => {
+  window.open("https://www.linkedin.com/in/anthonytummillo/", "_blank");
+};
+
+document.querySelector("#CodePen").onclick = () => {
+  window.open("https://codepen.io/ATummillo/", "_blank");
+};
+
+/*  
+    Nav elements visible on laptop 
+    and desktop computers
+*/
 document.querySelector("#HomeNav").onclick = () => {
   scrollToSection("#Intro");
 };
@@ -32,33 +73,20 @@ document.querySelector("#Resume").onclick = () => {
   );
 };
 
-document.querySelector("#Up-Arrow").onclick = () => {
-  scrollToSection("#Intro");
-};
+/*  
+    Nav elements on tablets and mobile devices 
+*/
+let burgerToggle = document.querySelector("#burger-toggle");
+burgerToggle.disabled = true;
 
-document.querySelector("#Github").onclick = () => {
-  window.open("https://github.com/ATummillo", "_blank");
-};
+let burgerNav = new BurgerNav(scrollToSection);
 
-document.querySelector("#LinkedIn").onclick = () => {
-  window.open("https://www.linkedin.com/in/anthonytummillo/", "_blank");
-};
-
-document.querySelector("#CodePen").onclick = () => {
-  window.open("https://codepen.io/ATummillo/", "_blank");
-};
-
-// Functions
-function scrollToSection(elId) {
-  let navHeight = getTopNavHeight();
-  let elPosition =
-    document.querySelector(elId).getBoundingClientRect().top + window.scrollY;
-
-  if (elId == "#Skills") {
-    elPosition += navHeight;
+document.querySelector(".burger__button").onclick = () => {
+  if (burgerToggle.checked == true) {
+    burgerToggle.checked = false;
+    burgerNav.closeBurger();
+  } else {
+    burgerToggle.checked = true;
+    burgerNav.render();
   }
-
-  let offsetPosition = elPosition - navHeight;
-
-  window.scrollTo({ top: offsetPosition, behavior: "smooth" });
-}
+};

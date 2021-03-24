@@ -15,10 +15,11 @@
     border-bottom: 0.5rem solid var(--color-secondary-blue);
   }
 
-  @media only screen and (max-width: $bp-tablet-landscape) {
-    // display: none;
-    // switch to hamburger menu instead of text links
-  }
+  //TODO switch to hamburger menu
+  // @media only screen and (max-width: $bp-tablet-landscape) {
+  //   // display: none;
+  //   // switch to hamburger menu instead of text links
+  // }
 
   &__slider {
     position: absolute;
@@ -51,6 +52,10 @@
 
     display: flex;
     justify-content: flex-end;
+
+    @media only screen and (max-width: $bp-tablet-landscape) {
+      display: none;
+    }
   }
 
   &__link--box {

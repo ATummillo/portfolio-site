@@ -1,0 +1,134 @@
+.burger {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  justify-self: end;
+  align-self: center;
+  height: 6.7rem;
+  margin-bottom: 0.3rem;
+  width: 3rem;
+  position: relative;
+  display: none;
+
+  @media only screen and (max-width: $bp-tablet-landscape) {
+    display: inline-block;
+  }
+
+  &__checkbox {
+    display: none;
+    pointer-events: none;
+  }
+
+  &__button {
+    @include centerAbsolute;
+    width: 3rem;
+    height: 2.5rem;
+    z-index: 10;
+    cursor: pointer;
+  }
+
+  &__menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+
+    background-image: radial-gradient(
+      var(--color-accent-purple),
+      var(--color-primary-grey)
+    );
+
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: 1fr min-content 1fr;
+    justify-items: stretch;
+
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &--home {
+      grid-row: 2 / 3;
+      grid-column: 2 / -3;
+    }
+
+    &--about {
+      grid-row: 3 / 4;
+      grid-column: 2 / -3;
+    }
+
+    &--skills {
+      grid-row: 4 / 5;
+      grid-column: 2 / -3;
+    }
+
+    &--portfolio {
+      grid-row: 5 / 6;
+      grid-column: 2 / -3;
+    }
+
+    &--contact {
+      grid-row: 6 / 7;
+      grid-column: 2 / -3;
+    }
+
+    &--resume {
+      grid-row: 7 / 8;
+      grid-column: 2 / -3;
+      align-self: center;
+
+      background-color: var(--color-primary-grey);
+      border: 0.3rem solid var(--color-accent-blue);
+      border-radius: 1rem;
+      padding: 1.5rem 1.5rem;
+      outline: none;
+    }
+  }
+
+  &__icon {
+    position: fixed;
+    margin-top: 1rem;
+
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 0.5rem;
+      background-color: var(--color-primary-white);
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+
+    &::before {
+      top: -1.2rem;
+    }
+
+    &::after {
+      top: 1.2rem;
+    }
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+}
