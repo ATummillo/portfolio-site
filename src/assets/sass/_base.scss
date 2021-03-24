@@ -43,6 +43,14 @@ html {
   @media only screen and (max-width: $bp-tablet-landscape) {
     font-size: 37.5%;
   }
+
+  @media only screen and (max-width: $bp-tablet-portrait) {
+    font-size: 25%;
+  }
+
+  @media only screen and (max-width: $bp-phone) {
+    font-size: 12.5%;
+  }
 }
 
 body {
