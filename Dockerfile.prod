@@ -20,7 +20,7 @@ COPY ./src /app
 COPY ./requirements.txt /app
 COPY ./package.json /app
 COPY ./webpack.config.prod.js /app
-COPY ./build_commands.sh /app
+COPY ./docker-entrypoint.sh /app
 
 # install python dependencies
 RUN pip install -r requirements.txt
@@ -30,11 +30,14 @@ RUN npm install -g npm@latest
 RUN npm install
 
 RUN mkdir -p /vol/web/static
+RUN mkdir /vol/dist
 
 
-### Production Deployment
-RUN ./build_commands.sh
+### Production Only
 RUN adduser -D myuser
 RUN chown -R myuser:myuser /vol/
 RUN chmod -R 755 /vol/web
 USER myuser
+
+ENTRYPOINT [ "sh", "docker-entrypoint.sh" ]
+CMD gunicorn app.wsgi:application --bind 0.0.0.0:$PORT

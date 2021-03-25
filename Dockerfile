@@ -20,7 +20,7 @@ COPY ./src /app
 COPY ./requirements.txt /app
 COPY ./package.json /app
 COPY ./webpack.config.prod.js /app
-COPY ./build_commands.sh /app
+COPY ./docker-entrypoint.sh /app
 
 # install python dependencies
 RUN pip install -r requirements.txt
@@ -30,3 +30,4 @@ RUN npm install -g npm@latest
 RUN npm install
 
 RUN mkdir -p /vol/web/static
+RUN mkdir /vol/dist

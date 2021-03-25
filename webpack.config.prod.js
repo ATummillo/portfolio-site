@@ -9,7 +9,7 @@ module.exports = {
   entry: "./assets/js/index.js",
   output: {
     filename: "bundle.js",
-    path: path.resolve(__dirname, "./dist"),
+    path: "/vol/dist/",
     publicPath: "",
   },
   mode: "production",

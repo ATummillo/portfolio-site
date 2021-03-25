@@ -11,7 +11,7 @@ services:
       - ./src/assets:/app/assets
       - ./src/app:/app/app
     command: >
-      sh -c "./build_commands.sh &&
+      sh -c "./docker-entrypoint.sh &&
       python manage.py runserver 0.0.0.0:8000"
     environment:
       - DEBUG=1

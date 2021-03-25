@@ -24,7 +24,7 @@ TEMPLATE_DIR = Path.joinpath(BASE_DIR, "templates")
 SECRET_KEY = os.environ.get("SECRET_KEY", default="default_key")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = int(os.environ.get("DEBUG", default=1))
+DEBUG = int(os.environ.get("DEBUG", default=0))
 
 ALLOWED_HOSTS = [
     "localhost",
@@ -84,10 +84,9 @@ WSGI_APPLICATION = "app.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "NAME": "/vol/db.sqlite3",
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -127,5 +126,5 @@ USE_TZ = True
 
 STATIC_ROOT = "/vol/web/static"
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-STATICFILES_DIRS = [Path.joinpath(BASE_DIR, "dist")]
+STATICFILES_DIRS = ["/vol/dist"]
 STATIC_URL = "/static/"
