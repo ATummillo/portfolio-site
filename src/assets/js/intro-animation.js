@@ -44,7 +44,7 @@ class Particle {
   }
 
   update() {
-    this.size -= 0.1;
+    this.size -= 0.08;
 
     if (this.size < 0) {
       this.x = mouse.x + Math.random() * 40 - 20;
@@ -70,7 +70,7 @@ function init() {
     let size = Math.random() * 10 + 5;
     let color = "grey";
     let weight = 1;
-    particleArray.push(new Particle(0, 0, size, color, weight));
+    particleArray.push(new Particle(-5, -5, size, color, weight));
   }
 }
 
