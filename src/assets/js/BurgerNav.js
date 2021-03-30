@@ -3,72 +3,173 @@ class BurgerNav {
     this.menu = document.createElement("div");
     this.menu.setAttribute("class", "burger__menu");
 
+    /*
+        Section Links
+    */
     // Home/Intro
-    this.home = document.createElement("span");
-    this.home.setAttribute("class", "burger__menu--home t2 t2--white");
-    this.home.innerHTML = "Home";
-    this.home.onclick = () => {
+    let home = document.createElement("span");
+    home.setAttribute("class", "burger__menu--home t2 t2--white");
+    home.innerHTML = "Home";
+    home.onclick = () => {
       this.closeBurger();
       scrollFunc("#Intro");
     };
 
     // About
-    this.about = document.createElement("span");
-    this.about.setAttribute("class", "burger__menu--about t2 t2--white");
-    this.about.innerHTML = "About";
-    this.about.onclick = () => {
+    let about = document.createElement("span");
+    about.setAttribute("class", "burger__menu--about t2 t2--white");
+    about.innerHTML = "About";
+    about.onclick = () => {
       this.closeBurger();
       scrollFunc("#About");
     };
 
     // Skills
-    this.skills = document.createElement("span");
-    this.skills.setAttribute("class", "burger__menu--skills t2 t2--white");
-    this.skills.innerHTML = "Skills";
-    this.skills.onclick = () => {
+    let skills = document.createElement("span");
+    skills.setAttribute("class", "burger__menu--skills t2 t2--white");
+    skills.innerHTML = "Skills";
+    skills.onclick = () => {
       this.closeBurger();
       scrollFunc("#Skills");
     };
 
     // Portfolio
-    this.portfolio = document.createElement("span");
-    this.portfolio.setAttribute(
-      "class",
-      "burger__menu--portfolio t2 t2--white"
-    );
-    this.portfolio.innerHTML = "Portfolio";
-    this.portfolio.onclick = () => {
+    let portfolio = document.createElement("span");
+    portfolio.setAttribute("class", "burger__menu--portfolio t2 t2--white");
+    portfolio.innerHTML = "Portfolio";
+    portfolio.onclick = () => {
       this.closeBurger();
       scrollFunc("#Portfolio");
     };
 
     // Contact
-    this.contact = document.createElement("span");
-    this.contact.setAttribute("class", "burger__menu--contact t2 t2--white");
-    this.contact.innerHTML = "Contact";
-    this.contact.onclick = () => {
+    let contact = document.createElement("span");
+    contact.setAttribute("class", "burger__menu--contact t2 t2--white");
+    contact.innerHTML = "Contact";
+    contact.onclick = () => {
       this.closeBurger();
       scrollFunc("#Contact");
     };
 
     // Resume
-    this.resume = document.createElement("button");
-    this.resume.setAttribute("class", "burger__menu--resume b1-mobile");
-    this.resume.innerHTML = "Resume";
-    this.resume.onclick = () => {
+    let resume = document.createElement("button");
+    resume.setAttribute("class", "burger__menu--resume b1-mobile");
+    resume.innerHTML = "Resume";
+    resume.onclick = () => {
       window.open(
         "https://drive.google.com/file/d/1mfoNuT3CZuotS0W1IBltE3L9bv5xdDUT/view?usp=sharing",
         "_blank"
       );
     };
 
+    /*
+        Social Icons
+    */
+    //Github
+    let githubSVG = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "svg"
+    );
+    let githubUse = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "use"
+    );
+    githubUse.setAttributeNS(
+      "http://www.w3.org/1999/xlink",
+      "xlink:href",
+      "#icon-github"
+    );
+    githubSVG.setAttribute("class", "burger__menu--github burger__social-icon");
+    githubSVG.appendChild(githubUse);
+    githubSVG.onclick = () => {
+      window.open("https://github.com/ATummillo", "_blank");
+    };
+
+    //LinkedIn
+    let linkedinSVG = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "svg"
+    );
+    let linkedinUse = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "use"
+    );
+    linkedinUse.setAttributeNS(
+      "http://www.w3.org/1999/xlink",
+      "xlink:href",
+      "#icon-linkedin"
+    );
+    linkedinSVG.setAttribute(
+      "class",
+      "burger__menu--linkedin burger__social-icon"
+    );
+    linkedinSVG.appendChild(linkedinUse);
+    linkedinSVG.onclick = () => {
+      window.open("https://www.linkedin.com/in/anthonytummillo/", "_blank");
+    };
+
+    //Codepen
+    let codepenSVG = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "svg"
+    );
+    let codepenUse = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "use"
+    );
+    codepenUse.setAttributeNS(
+      "http://www.w3.org/1999/xlink",
+      "xlink:href",
+      "#icon-codepen"
+    );
+    codepenSVG.setAttribute(
+      "class",
+      "burger__menu--codepen burger__social-icon"
+    );
+    codepenSVG.appendChild(codepenUse);
+    codepenSVG.onclick = () => {
+      window.open("https://codepen.io/ATummillo/", "_blank");
+    };
+
+    //Dockerhub
+    let dockerhubSVG = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "svg"
+    );
+    let dockerhubUse = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "use"
+    );
+    dockerhubUse.setAttributeNS(
+      "http://www.w3.org/1999/xlink",
+      "xlink:href",
+      "#icon-docker"
+    );
+    dockerhubSVG.setAttribute(
+      "class",
+      "burger__menu--dockerhub burger__social-icon burger__social-icon--docker"
+    );
+    dockerhubSVG.appendChild(dockerhubUse);
+    dockerhubSVG.onclick = () => {
+      window.open("https://registry.hub.docker.com/u/atummillo", "_blank");
+    };
+
+    let socialContainer = document.createElement("div");
+    socialContainer.setAttribute("class", "burger__social");
+    socialContainer.appendChild(githubSVG);
+    socialContainer.appendChild(linkedinSVG);
+    socialContainer.appendChild(codepenSVG);
+    socialContainer.appendChild(dockerhubSVG);
+
     // Add all items to the menu
-    this.menu.appendChild(this.home);
-    this.menu.appendChild(this.about);
-    this.menu.appendChild(this.skills);
-    this.menu.appendChild(this.portfolio);
-    this.menu.appendChild(this.contact);
-    this.menu.appendChild(this.resume);
+    this.menu.appendChild(home);
+    this.menu.appendChild(about);
+    this.menu.appendChild(skills);
+    this.menu.appendChild(portfolio);
+    this.menu.appendChild(contact);
+    this.menu.appendChild(resume);
+    this.menu.appendChild(socialContainer);
+    // console.log(githubSVG);
   }
 
   closeBurger() {

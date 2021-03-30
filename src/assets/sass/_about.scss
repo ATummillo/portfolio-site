@@ -3,14 +3,59 @@
   grid-column: 2 / 3;
 
   display: grid;
-  grid-template-rows: min-content min-content;
+  grid-template-rows: repeat(2, min-content);
   grid-template-columns: 2fr 1fr;
   column-gap: 3.5rem;
 
+  @media only screen and (max-width: $bp-phone) {
+    grid-template-rows: repeat(3, min-content);
+    grid-template-columns: 1fr;
+  }
+
+  &__picture-container {
+    grid-row: 2 / 3;
+    grid-column: 2 / 2;
+
+    @media only screen and (max-width: $bp-phone) {
+      grid-row: 3 / 4;
+      grid-column: 1 / -1;
+      justify-self: center;
+
+      margin-top: 3.5rem;
+    }
+
+    display: flex;
+
+    &:hover {
+      div {
+        transform: translateX(-0.2rem) translateY(-0.25rem);
+        border-color: var(--color-accent-purple);
+
+        @media only screen and (max-width: $bp-tablet-landscape) {
+          transform: translateX(-0.2vw) translateY(-0.27vw);
+        }
+
+        @media only screen and (max-width: $bp-phone) {
+          transform: translateX(-0.2rem) translateY(-0.25rem);
+        }
+      }
+    }
+  }
+
   &__img {
-    position: absolute;
+    position: relative;
     height: 37.5rem;
     width: 30rem;
+
+    @media only screen and (max-width: $bp-tablet-landscape) {
+      height: 30vw;
+      width: 24vw;
+    }
+
+    @media only screen and (max-width: $bp-phone) {
+      height: 30rem;
+      width: 24rem;
+    }
   }
 
   &__title {
@@ -23,26 +68,28 @@
     grid-column: 1 / 2;
   }
 
-  &__picture-container {
-    grid-row: 2 / 3;
-    grid-column: 2 / 2;
-
-    &:hover {
-      div {
-        transform: translateX(-0.1rem) translateY(-0.1rem);
-        border-color: var(--color-accent-purple);
-      }
-    }
-  }
-
   &__picture-backdrop {
-    position: relative;
+    position: absolute;
     z-index: -1;
-    height: 37.7rem;
-    width: 30.25rem;
+    height: 37.9rem;
+    width: 30.4rem;
     transition: all 0.5s ease;
     transform: translate(3.5rem, 3.5rem);
     border-radius: 2.5rem;
-    border: 0.3rem solid var(--color-secondary-blue);
+    border: 0.5rem solid var(--color-secondary-blue);
+
+    @media only screen and (max-width: $bp-tablet-landscape) {
+      height: 30.5vw;
+      width: 24.4vw;
+      border-radius: 2.2vw;
+      transform: translate(2.5vw, 2.5vw);
+    }
+
+    @media only screen and (max-width: $bp-phone) {
+      height: 30.4rem;
+      width: 24.4rem;
+      border-radius: 2rem;
+      transform: translate(1.75rem, 1.75rem);
+    }
   }
 }

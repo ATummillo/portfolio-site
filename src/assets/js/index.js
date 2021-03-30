@@ -4,6 +4,7 @@ import "./document-nav.js";
 import "./portfolio-links.js";
 import "./nav-highlight.js";
 import "./send-email.js";
+import "./rotation-fix.js";
 
 // Import Sass
 import "../sass/main.scss";

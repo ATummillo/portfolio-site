@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
+    />
     <link rel="shortcut icon" type="image/png" href="favicon.png" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -61,7 +64,7 @@
         <div class="burger">
           <input type="checkbox" id="burger-toggle" class="burger__checkbox" />
           <label for="burger-toggle" class="burger__button"
-            ><span class="burger__icon"></span
+            ><span class="burger__menu-icon"></span
           ></label>
         </div>
       </div>
@@ -75,6 +78,9 @@
         </svg>
         <svg id="CodePen" class="nav__social-icon">
           <use xlink:href="#icon-codepen"></use>
+        </svg>
+        <svg id="dockerhub" class="nav__social-icon nav__social-icon--docker">
+          <use xlink:href="#icon-docker"></use>
         </svg>
       </div>
     </nav>
@@ -106,79 +112,76 @@
     <!-- SKILLS SECTION -->
     <section id="Skills" class="skills">
       <div class="section-title__container skills__title">
-        <p class="section-title__title t2 t2--grey">Favorite Technologies</p>
+        <p class="section-title__title t2 t2--grey">Favorite Tech</p>
         <div class="section-title__line"></div>
       </div>
       <div class="skills__container">
-        <svg class="skills__banner skills__banner--web">
-          <use xlink:href="#banner-web"></use>
-        </svg>
-        <svg class="skills__block skills__block--web">
-          <use xlink:href="#logoblock-web"></use>
-        </svg>
-        <svg class="skills__stage skills__stage--web">
-          <use xlink:href="#stage"></use>
-        </svg>
-        <svg class="skills__banner skills__banner--db">
-          <use xlink:href="#banner-db"></use>
-        </svg>
-        <svg class="skills__block skills__block--db">
-          <use xlink:href="#logoblock-db"></use>
-        </svg>
-        <svg class="skills__stage skills__stage--db">
-          <use xlink:href="#stage"></use>
-        </svg>
-        <svg class="skills__banner skills__banner--lang">
-          <use xlink:href="#banner-lang"></use>
-        </svg>
-        <svg class="skills__block skills__block--lang">
-          <use xlink:href="#logoblock-lang"></use>
-        </svg>
-        <svg class="skills__stage skills__stage--lang">
-          <use xlink:href="#stage"></use>
-        </svg>
-        <div class="skills__banner--cloud">
+        <span class="skills__item skills__item--web">
+          <svg class="skills__banner">
+            <use xlink:href="#banner-web"></use>
+          </svg>
+          <svg class="skills__block">
+            <use xlink:href="#logoblock-web"></use>
+          </svg>
+          <svg class="skills__stage">
+            <use xlink:href="#stage"></use>
+          </svg>
+        </span>
+        <span class="skills__item skills__item--lang">
+          <svg class="skills__banner">
+            <use xlink:href="#banner-lang"></use>
+          </svg>
+          <svg class="skills__block">
+            <use xlink:href="#logoblock-lang"></use>
+          </svg>
+          <svg class="skills__stage">
+            <use xlink:href="#stage"></use>
+          </svg>
+        </span>
+        <span class="skills__item skills__item--db">
+          <svg class="skills__banner">
+            <use xlink:href="#banner-db"></use>
+          </svg>
+          <svg class="skills__block">
+            <use xlink:href="#logoblock-db"></use>
+          </svg>
+          <svg class="skills__stage">
+            <use xlink:href="#stage"></use>
+          </svg>
+        </span>
+        <span class="skills__item skills__item--cloud">
           <svg class="skills__banner">
             <use xlink:href="#banner-cloud"></use>
           </svg>
-        </div>
-        <div class="skills__block--cloud">
           <svg class="skills__block">
             <use xlink:href="#logoblock-cloud"></use>
           </svg>
-        </div>
-        <div class="skills__stage--cloud">
           <svg class="skills__stage">
             <use xlink:href="#stage"></use>
           </svg>
-        </div>
-        <div class="skills__banner--misc">
+        </span>
+        <span class="skills__item skills__item--misc">
           <svg class="skills__banner">
             <use xlink:href="#banner-misc"></use>
           </svg>
-        </div>
-        <div class="skills__block--misc">
           <svg class="skills__block">
             <use xlink:href="#logoblock-misc"></use>
           </svg>
-        </div>
-        <div class="skills__stage--misc">
           <svg class="skills__stage">
             <use xlink:href="#stage"></use>
           </svg>
-        </div>
+        </span>
       </div>
     </section>
 
     <!-- PORTFOLIO SECTION -->
     <section id="Portfolio" class="portfolio">
-      <div class="section-title__container">
+      <div class="section-title__container portfolio__title">
         <p class="section-title__title t2 t2--grey">Projects</p>
         <div class="section-title__line"></div>
       </div>
       <div class="portfolio__info t3 t3--blue">
-        (All projects are served with Django and deployed on Heroku using
-        Docker)
+        All projects are served with Django and deployed on Heroku using Docker
       </div>
       <div class="portfolio__container">
         <div class="card portfolio__portfolio-site">
@@ -192,13 +195,19 @@
           </div>
           <div class="card__side card__side--back card__portfolio-site--back">
             <span class="card__project-title t3 t3--purple">This Site</span>
-            <span class="card__list-title card-tech">Technologies used:</span>
-            <span class="card-tli">JS (ES6)</span>
-            <span class="card-tli">(S)CSS</span>
-            <span class="card-tli">HTML5</span>
-            <span class="card-tli">Webpack</span>
+            <span class="card__tech-container">
+              <span class="card__tech-title card-tech">Technologies used:</span>
+              <span class="card__row card__row--top">
+                <span class="card-tli">JS (ES6)</span>
+                <span class="card-tli">(S)CSS</span>
+                <span class="card-tli">HTML5</span>
+              </span>
+              <span class="card__row card__row--bottom">
+                <span class="card-tli">Webpack</span>
+              </span>
+            </span>
             <span class="card__description card-desc"
-              >My official portfolio site!</span
+              >My official portfolio site. Designed and built 100% by me!</span
             >
             <div class="card__btn-box">
               <button
@@ -229,12 +238,17 @@
             <span class="card__project-title t3 t3--purple"
               >Image Manipulation</span
             >
-            <span class="card__list-title card-tech">Technologies used:</span>
-            <span class="card-tli">JS (ES6)</span>
-            <span class="card-tli">HTML5</span>
-            <span class="card-tli">Webpack</span>
+            <span class="card__tech-container">
+              <span class="card__tech-title card-tech">Technologies used:</span>
+              <span class="card__row card__row--top">
+                <span class="card-tli">JS (ES6)</span>
+                <span class="card-tli">HTML5</span>
+                <span class="card-tli">Webpack</span>
+              </span>
+            </span>
+
             <span class="card__description card-desc">
-              An animation created by manipulating pixels on an HTML5 Canvas!
+              An animation made by manipulating pixels on an HTML5 Canvas!
             </span>
             <div class="card__btn-box">
               <button id="CanvasDemo" class="card__btn card__btn--demo b2">
@@ -257,10 +271,14 @@
           </div>
           <div class="card__side card__side--back card__star-social--back">
             <span class="card__project-title t3 t3--purple">Star Social</span>
-            <span class="card__list-title card-tech">Technologies used:</span>
-            <span class="card-tli">JS (ES6)</span>
-            <span class="card-tli">HTML5</span>
-            <span class="card-tli">Postgres</span>
+            <span class="card__tech-container">
+              <span class="card__tech-title card-tech">Technologies used:</span>
+              <span class="card__row card__row--top">
+                <span class="card-tli">JS (ES6)</span>
+                <span class="card-tli">HTML5</span>
+                <span class="card-tli">Postgres</span>
+              </span>
+            </span>
             <span class="card__description card-desc">
               A blog specifically for lovers of space exploration!
             </span>
@@ -285,10 +303,14 @@
           </div>
           <div class="card__side card__side--back card__nexter--back">
             <span class="card__project-title t3 t3--purple">Nexter</span>
-            <span class="card__list-title card-tech">Technologies used:</span>
-            <span class="card-tli">(S)CSS</span>
-            <span class="card-tli">HTML5</span>
-            <span class="card-tli">npm</span>
+            <span class="card__tech-container">
+              <span class="card__tech-title card-tech">Technologies used:</span>
+              <span class="card__row card__row--top">
+                <span class="card-tli">(S)CSS</span>
+                <span class="card-tli">HTML5</span>
+                <span class="card-tli">npm</span>
+              </span>
+            </span>
             <span class="card__description card-desc">
               While building this site I learned how to use CSS Grid!
             </span>
@@ -313,10 +335,14 @@
           </div>
           <div class="card__side card__side--back card__trillo--back">
             <span class="card__project-title t3 t3--purple">Trillo</span>
-            <span class="card__list-title card-tech">Technologies used:</span>
-            <span class="card-tli">(S)CSS</span>
-            <span class="card-tli">HTML5</span>
-            <span class="card-tli">npm</span>
+            <span class="card__tech-container">
+              <span class="card__tech-title card-tech">Technologies used:</span>
+              <span class="card__row card__row--top">
+                <span class="card-tli card__row--item">(S)CSS</span>
+                <span class="card-tli card__row--item">HTML5</span>
+                <span class="card-tli card__row--item">npm</span>
+              </span>
+            </span>
             <span class="card__description card-desc">
               I mastered CSS Flexbox while coding this one!
             </span>
@@ -341,9 +367,15 @@
           </div>
           <div class="card__side card__side--back card__recipe-api--back">
             <span class="card__project-title t3 t3--purple">Recipe-API</span>
-            <span class="card__list-title card-tech">Technologies used:</span>
-            <span class="card-tli card__top-row">Django REST Framework</span>
-            <span class="card-tli card__bottom-row">Postgres</span>
+            <span class="card__tech-container">
+              <span class="card__tech-title card-tech">Technologies used:</span>
+              <span class="card__row card__row--top">
+                <span class="card-tli">Django REST Framework</span>
+              </span>
+              <span class="card__row card__row--bottom">
+                <span class="card-tli">Postgres</span>
+              </span>
+            </span>
             <span class="card__description card-desc">
               An API that stores and lists recipes. Postgres is used as the
               database!
@@ -369,10 +401,14 @@
           </div>
           <div class="card__side card__side--back card__natours--back">
             <span class="card__project-title t3 t3--purple">Natours</span>
-            <span class="card__list-title card-tech">Technologies used:</span>
-            <span class="card-tli">(S)CSS</span>
-            <span class="card-tli">HTML</span>
-            <span class="card-tli">npm</span>
+            <span class="card__tech-container">
+              <span class="card__tech-title card-tech">Technologies used:</span>
+              <span class="card__row card__row--top">
+                <span class="card-tli">(S)CSS</span>
+                <span class="card-tli">HTML</span>
+                <span class="card-tli">npm</span>
+              </span>
+            </span>
             <span class="card__description card-desc">
               A ton of cool animations are in this one. Built with only a float
               layout!
@@ -398,10 +434,14 @@
           </div>
           <div class="card__side card__side--back card__tech-blog--back">
             <span class="card__project-title t3 t3--purple">Tech Blog</span>
-            <span class="card__list-title card-tech">Technologies used:</span>
-            <span class="card-tli">JS (ES6)</span>
-            <span class="card-tli">Bootstrap</span>
-            <span class="card-tli">Postgres</span>
+            <span class="card__tech-container">
+              <span class="card__tech-title card-tech">Technologies used:</span>
+              <span class="card__row card__row--top">
+                <span class="card-tli">JS (ES6)</span>
+                <span class="card-tli">Bootstrap</span>
+                <span class="card-tli">Postgres</span>
+              </span>
+            </span>
             <span class="card__description card-desc">
               My first Django application utilizing an external database!
             </span>
@@ -420,7 +460,7 @@
 
     <!-- CONTACT SECTION -->
     <section id="Contact" class="contact">
-      <div class="section-title__container">
+      <div class="section-title__container contact__title">
         <p class="section-title__title t2 t2--grey">Contact</p>
         <div class="section-title__line"></div>
       </div>

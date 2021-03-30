@@ -4,3 +4,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin cardText {
+  background-color: var(--color-primary-grey);
+  padding: 0.25rem 1.5rem;
+}

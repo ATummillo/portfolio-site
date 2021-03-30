@@ -30,8 +30,8 @@
     position: fixed;
     left: 0;
     top: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     z-index: 5;
 
     background-image: radial-gradient(
@@ -41,8 +41,9 @@
 
     display: grid;
     grid-template-rows: repeat(8, 1fr);
-    grid-template-columns: 1fr min-content 1fr;
-    justify-items: stretch;
+    grid-template-columns: 1fr min-content 1fr min-content 1fr;
+    row-gap: 1rem;
+    // justify-items: stretch;
 
     span {
       display: flex;
@@ -52,43 +53,63 @@
 
     &--home {
       grid-row: 2 / 3;
-      grid-column: 2 / -3;
+      grid-column: 2 / 3;
     }
 
     &--about {
       grid-row: 3 / 4;
-      grid-column: 2 / -3;
+      grid-column: 2 / 3;
     }
 
     &--skills {
       grid-row: 4 / 5;
-      grid-column: 2 / -3;
+      grid-column: 2 / 3;
     }
 
     &--portfolio {
       grid-row: 5 / 6;
-      grid-column: 2 / -3;
+      grid-column: 2 / 3;
     }
 
     &--contact {
       grid-row: 6 / 7;
-      grid-column: 2 / -3;
+      grid-column: 2 / 3;
     }
 
     &--resume {
       grid-row: 7 / 8;
-      grid-column: 2 / -3;
+      grid-column: 2 / 3;
+      justify-self: center;
       align-self: center;
 
       background-color: var(--color-primary-grey);
       border: 0.3rem solid var(--color-accent-blue);
       border-radius: 1rem;
-      padding: 1.5rem 1.5rem;
+      padding: 0.5rem 0.5rem;
       outline: none;
     }
   }
 
-  &__icon {
+  &__social {
+    grid-row: 2 / 8;
+    grid-column: 4 / 5;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  &__social-icon {
+    height: 5rem;
+    width: 5rem;
+    fill: var(--color-accent-blue);
+
+    &--docker {
+      margin-left: 0.2rem;
+    }
+  }
+
+  &__menu-icon {
     position: fixed;
     margin-top: 1rem;
 
@@ -118,16 +139,16 @@
     }
   }
 
-  &__checkbox:checked + &__button &__icon {
+  &__checkbox:checked + &__button &__menu-icon {
     background-color: transparent;
   }
 
-  &__checkbox:checked + &__button &__icon::before {
+  &__checkbox:checked + &__button &__menu-icon::before {
     top: 0;
     transform: rotate(135deg);
   }
 
-  &__checkbox:checked + &__button &__icon::after {
+  &__checkbox:checked + &__button &__menu-icon::after {
     top: 0;
     transform: rotate(-135deg);
   }

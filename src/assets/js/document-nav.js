@@ -42,6 +42,10 @@ document.querySelector("#CodePen").onclick = () => {
   window.open("https://codepen.io/ATummillo/", "_blank");
 };
 
+document.querySelector("#dockerhub").onclick = () => {
+  window.open("https://registry.hub.docker.com/u/atummillo", "_blank");
+};
+
 /*  
     Nav elements visible on laptop 
     and desktop computers
