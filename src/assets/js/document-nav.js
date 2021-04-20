@@ -72,7 +72,7 @@ document.querySelector("#ContactNav").onclick = () => {
 
 document.querySelector("#Resume").onclick = () => {
   window.open(
-    "https://drive.google.com/file/d/1mfoNuT3CZuotS0W1IBltE3L9bv5xdDUT/view?usp=sharing",
+    "https://drive.google.com/file/d/1nvPtTpzd9RLkMPDfZL4lvJtAAQVm_r-8/view?usp=sharing",
     "_blank"
   );
 };
