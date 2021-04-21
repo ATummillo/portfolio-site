@@ -1,6 +1,6 @@
 # My Portfolio Site
 
-![Image](https://drive.google.com/uc?export=view&id=1w4NZCoaAihV6emR45mIQp813VJWyigXn)
+![Image](./src/assets/img/portfolio-site_README.png)
 
 > My personal website and portfolio!
 
