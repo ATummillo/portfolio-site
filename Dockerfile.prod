@@ -26,7 +26,6 @@ COPY ./docker-entrypoint.sh /app
 RUN pip install -r requirements.txt
 
 # install node packages
-RUN npm install -g npm@latest
 RUN npm install
 
 RUN mkdir -p /vol/web/static
